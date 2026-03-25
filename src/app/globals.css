@@ -26,10 +26,40 @@
   --color-emerald-100: #d1fae5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Scroll margin for section anchor navigation (accounts for scroll progress bar) */
+section[id] {
+  scroll-margin-top: 1rem;
+}
+
+/* Hero floating animation */
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-hero-float {
+  animation: hero-float 3s ease-in-out infinite;
+}
+
+/* Checklist check animation */
+@keyframes check-pop {
+  0% { transform: scale(0.8); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.animate-check-pop {
+  animation: check-pop 0.2s ease-out;
 }
 
 @media (prefers-color-scheme: dark) {

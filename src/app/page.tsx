@@ -3,23 +3,22 @@ import { DaySchedule } from "@/components/DaySchedule";
 import type { ScheduleItem } from "@/components/DaySchedule";
 import { PlaceCard } from "@/components/PlaceCard";
 import { SectionTitle } from "@/components/SectionTitle";
+import { TransportInfo } from "@/components/TransportInfo";
+import type { TransportRoute } from "@/components/TransportInfo";
+import { MealTable } from "@/components/MealTable";
+import type { MealEntry } from "@/components/MealTable";
+import { Hero } from "@/components/Hero";
+import { BudgetSection } from "@/components/BudgetSection";
+import { ChecklistSection } from "@/components/ChecklistSection";
 
 export default function Home() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-8 pb-20">
+    <main className="max-w-3xl mx-auto px-4 py-8 pb-24">
       {/* Hero */}
-      <header className="text-center mb-12">
-        <p className="text-4xl mb-2">🌸</p>
-        <h1 className="text-4xl font-bold tracking-tight mb-2">
-          후쿠오카 여행
-        </h1>
-        <p className="text-lg text-foreground/60">
-          2026. 3. 30 (월) ~ 4. 3 (금) · 4박 5일
-        </p>
-      </header>
+      <Hero />
 
       {/* 항공편 */}
-      <section className="mb-12">
+      <section id="flights" className="mb-12">
         <SectionTitle icon="✈️" title="항공편" />
         <div className="grid gap-4 sm:grid-cols-2">
           <FlightCard
@@ -44,7 +43,7 @@ export default function Home() {
       </section>
 
       {/* 숙소 */}
-      <section className="mb-12">
+      <section id="accommodation" className="mb-12">
         <SectionTitle icon="🏨" title="숙소" />
         <div className="rounded-2xl border-2 border-dashed border-foreground/20 p-8 text-center text-foreground/50">
           <p className="text-2xl mb-2">🔍</p>
@@ -54,18 +53,20 @@ export default function Home() {
       </section>
 
       {/* 예산 요약 */}
-      <section className="mb-12">
+      <section id="budget" className="mb-12">
         <SectionTitle icon="💰" title="예산 요약 (1인 기준)" />
-        <div className="grid gap-3 sm:grid-cols-2">
-          <BudgetCard label="교통비 총합" amount="~¥16,800" detail="공항↔시내, 시내이동, 유후인 왕복 포함" />
-          <BudgetCard label="식비 총합" amount="~¥18,000" detail="8끼 식사 (야타이~스시까지)" />
-          <BudgetCard label="액티비티" amount="~¥4,000" detail="클라이밍 + 온천 (맥주공장 무료)" />
-          <BudgetCard label="합계 (숙소 제외)" amount="~¥38,800" detail="약 35만원 (환율 ¥100=₩900 기준)" />
-        </div>
+        <BudgetSection
+          total={{ label: "합계 (숙소 제외)", amount: "~¥38,800", detail: "약 35만원 (환율 ¥100=₩900 기준)" }}
+          items={[
+            { label: "교통비 총합", amount: "~¥16,800", detail: "공항↔시내, 시내이동, 유후인 왕복 포함", icon: "🚇" },
+            { label: "식비 총합", amount: "~¥18,000", detail: "8끼 식사 (야타이~스시까지)", icon: "🍽️" },
+            { label: "액티비티", amount: "~¥4,000", detail: "클라이밍 + 온천 (맥주공장 무료)", icon: "🎯" },
+          ]}
+        />
       </section>
 
       {/* 일정 */}
-      <section className="mb-12">
+      <section id="schedule" className="mb-12">
         <SectionTitle icon="📅" title="일정" />
         <div className="space-y-6">
           {/* Day 1 */}
@@ -76,6 +77,7 @@ export default function Home() {
             transportCost="¥260"
             mapUrl="https://www.google.com/maps/dir/福岡空港国際線ターミナル/博多駅/小金ちゃん+天神+福岡/中洲+屋台+福岡"
             items={day1Items}
+            defaultOpen
           />
 
           {/* Day 2 */}
@@ -124,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* 교통 정보 */}
-      <section className="mb-12">
+      <section id="transport" className="mb-12">
         <SectionTitle icon="🚇" title="교통 안내" />
         <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] p-5 space-y-4">
           <div>
@@ -135,44 +137,22 @@ export default function Home() {
           </div>
           <div className="border-t border-foreground/[0.06] pt-4">
             <h3 className="font-semibold text-sm mb-2">주요 구간 요금 (검증 완료)</h3>
-            <div className="grid gap-2 text-sm">
-              <TransportRow from="공항 (국내선)" to="하카타역" method="지하철 공항선" time="5분" cost="¥260" />
-              <TransportRow from="하카타역" to="텐진역" method="지하철 공항선" time="6분" cost="¥210" />
-              <TransportRow from="텐진역" to="아카사카역" method="지하철 공항선" time="2분" cost="¥210" />
-              <TransportRow from="텐진역" to="오호리공원역" method="지하철 공항선" time="4분" cost="¥210" />
-              <TransportRow from="하카타역" to="아카사카역" method="지하철 공항선" time="8분" cost="¥260" />
-              <TransportRow from="텐진미나미역" to="나나쿠마역" method="지하철 나나쿠마선" time="12분" cost="¥300" />
-              <TransportRow from="텐진역" to="니시테츠 오고리" method="니시테츠 특급" time="37분" cost="¥530" />
-              <TransportRow from="오고리역" to="타치아라이역" method="아마기 철도" time="15분" cost="¥280" />
-              <TransportRow from="하카타역" to="유후인역" method="유후인노모리" time="2시간 14분" cost="¥6,130" />
-              <TransportRow from="하카타역" to="나카스" method="도보" time="12~15분" cost="무료" />
-              <TransportRow from="하카타역" to="캐널시티" method="도보" time="10분" cost="무료" />
-              <TransportRow from="텐진" to="캐널시티" method="도보" time="10~12분" cost="무료" />
-            </div>
+            <TransportInfo rows={transportRoutes} />
           </div>
         </div>
       </section>
 
       {/* 식사 테마 분배 */}
-      <section className="mb-12">
+      <section id="meals" className="mb-12">
         <SectionTitle icon="🍽️" title="식사 테마 분배" />
         <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] overflow-hidden">
-          <div className="grid grid-cols-[auto_1fr_1fr_auto] text-sm">
-            <MealRow day="Day 1" meal="저녁" theme="屋台 야타이" restaurant="小金ちゃん + 나카스 야타이" />
-            <MealRow day="Day 2" meal="점심" theme="天ぷら 텐푸라" restaurant="天ぷら ひらお" />
-            <MealRow day="Day 2" meal="저녁" theme="もつ鍋 모츠나베" restaurant="もつ鍋 やま中" />
-            <MealRow day="Day 3" meal="점심" theme="湯布院名物 유후인 명물" restaurant="由布まぶし 心" />
-            <MealRow day="Day 3" meal="저녁" theme="焼き鳥 야키토리" restaurant="かわ屋 薬院本店" />
-            <MealRow day="Day 4" meal="점심" theme="うどん 우동" restaurant="うどん平" />
-            <MealRow day="Day 4" meal="저녁" theme="寿司 스시" restaurant="ひょうたん寿司" />
-            <MealRow day="Day 5" meal="점심" theme="ラーメン 라멘" restaurant="博多一双" />
-          </div>
+          <MealTable meals={mealData} />
         </div>
         <p className="text-xs text-foreground/40 mt-2">* 8가지 후쿠오카 먹거리 테마를 중복 없이 분배</p>
       </section>
 
       {/* 방문 예정지 */}
-      <section className="mb-12">
+      <section id="places" className="mb-12">
         <SectionTitle icon="📍" title="방문 예정지" />
         <div className="grid gap-4 sm:grid-cols-2">
           <PlaceCard
@@ -231,7 +211,7 @@ export default function Home() {
       </section>
 
       {/* 참고 링크 */}
-      <section className="mb-12">
+      <section id="links" className="mb-12">
         <SectionTitle icon="🔗" title="참고 링크" />
         <div className="space-y-3">
           <ReferenceLink
@@ -274,23 +254,25 @@ export default function Home() {
       </section>
 
       {/* 준비물 체크리스트 */}
-      <section>
+      <section id="checklist">
         <SectionTitle icon="✅" title="준비 체크리스트" />
-        <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] p-6 space-y-3">
-          <CheckItem label="숙소 예약" />
-          <CheckItem label="유후인노모리 열차 예약 (3/1 오전 오픈!)" />
-          <CheckItem label="키린 맥주 공장 투어 예약 (3/1 오픈)" />
-          <CheckItem label="もつ鍋 やま中 저녁 예약 (3/31)" />
-          <CheckItem label="ひょうたん寿司 확인 (3인 이상 시 예약)" />
-          <CheckItem label="かわ屋 薬院 저녁 예약 (4/1)" />
-          <CheckItem label="항공편 웹 체크인" />
-          <CheckItem label="Wi-Fi / 유심 준비" />
-          <CheckItem label="여행자 보험" />
-          <CheckItem label="엔화 환전 (현금 필요: 야타이·우동 등)" />
-          <CheckItem label="IC카드 준비 (모바일 Suica or 현지 구매)" />
-          <CheckItem label="여권 (면세 쇼핑 시 필요)" />
-          <CheckItem label="겉옷 (유후인 기온 5~18°C)" />
-        </div>
+        <ChecklistSection
+          items={[
+            { label: "숙소 예약", category: "예약" },
+            { label: "유후인노모리 열차 예약 (3/1 오전 오픈!)", category: "예약" },
+            { label: "키린 맥주 공장 투어 예약 (3/1 오픈)", category: "예약" },
+            { label: "もつ鍋 やま中 저녁 예약 (3/31)", category: "예약" },
+            { label: "ひょうたん寿司 확인 (3인 이상 시 예약)", category: "예약" },
+            { label: "かわ屋 薬院 저녁 예약 (4/1)", category: "예약" },
+            { label: "항공편 웹 체크인", category: "준비물" },
+            { label: "Wi-Fi / 유심 준비", category: "준비물" },
+            { label: "여행자 보험", category: "준비물" },
+            { label: "엔화 환전 (현금 필요: 야타이·우동 등)", category: "준비물" },
+            { label: "IC카드 준비 (모바일 Suica or 현지 구매)", category: "준비물" },
+            { label: "여권 (면세 쇼핑 시 필요)", category: "서류" },
+            { label: "겉옷 (유후인 기온 5~18°C)", category: "준비물" },
+          ]}
+        />
       </section>
     </main>
   );
@@ -614,43 +596,33 @@ const day5Items: ScheduleItem[] = [
   },
 ];
 
-/* ── Helper Components ── */
+/* ── Transport Routes Data ── */
+const transportRoutes: TransportRoute[] = [
+  { from: "공항 (국내선)", to: "하카타역", method: "지하철 공항선", time: "5분", cost: "¥260" },
+  { from: "하카타역", to: "텐진역", method: "지하철 공항선", time: "6분", cost: "¥210" },
+  { from: "텐진역", to: "아카사카역", method: "지하철 공항선", time: "2분", cost: "¥210" },
+  { from: "텐진역", to: "오호리공원역", method: "지하철 공항선", time: "4분", cost: "¥210" },
+  { from: "하카타역", to: "아카사카역", method: "지하철 공항선", time: "8분", cost: "¥260" },
+  { from: "텐진미나미역", to: "나나쿠마역", method: "지하철 나나쿠마선", time: "12분", cost: "¥300" },
+  { from: "텐진역", to: "니시테츠 오고리", method: "니시테츠 특급", time: "37분", cost: "¥530" },
+  { from: "오고리역", to: "타치아라이역", method: "아마기 철도", time: "15분", cost: "¥280" },
+  { from: "하카타역", to: "유후인역", method: "유후인노모리", time: "2시간 14분", cost: "¥6,130" },
+  { from: "하카타역", to: "나카스", method: "도보", time: "12~15분", cost: "무료" },
+  { from: "하카타역", to: "캐널시티", method: "도보", time: "10분", cost: "무료" },
+  { from: "텐진", to: "캐널시티", method: "도보", time: "10~12분", cost: "무료" },
+];
 
-function BudgetCard({ label, amount, detail }: { label: string; amount: string; detail: string }) {
-  return (
-    <div className="rounded-xl bg-foreground/[0.03] border border-foreground/[0.06] p-4">
-      <div className="text-sm text-foreground/50">{label}</div>
-      <div className="text-xl font-bold mt-1">{amount}</div>
-      <div className="text-xs text-foreground/40 mt-1">{detail}</div>
-    </div>
-  );
-}
-
-function TransportRow({ from, to, method, time, cost }: { from: string; to: string; method: string; time: string; cost: string }) {
-  return (
-    <div className="flex items-center gap-2 py-1.5 border-b border-foreground/[0.04] last:border-0">
-      <span className="text-foreground/70 font-medium min-w-0">{from}</span>
-      <span className="text-foreground/30">→</span>
-      <span className="text-foreground/70 font-medium min-w-0">{to}</span>
-      <span className="ml-auto flex items-center gap-2 shrink-0">
-        <span className="text-xs text-foreground/40">{method}</span>
-        <span className="text-xs text-foreground/40">{time}</span>
-        <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-sky-50 text-sky-600">{cost}</span>
-      </span>
-    </div>
-  );
-}
-
-function MealRow({ day, meal, theme, restaurant }: { day: string; meal: string; theme: string; restaurant: string }) {
-  return (
-    <>
-      <span className="px-4 py-2.5 border-b border-foreground/[0.04] font-medium text-foreground/50">{day}</span>
-      <span className="px-3 py-2.5 border-b border-foreground/[0.04] text-foreground/60">{meal}</span>
-      <span className="px-3 py-2.5 border-b border-foreground/[0.04] font-medium">{theme}</span>
-      <span className="px-4 py-2.5 border-b border-foreground/[0.04] text-foreground/60">{restaurant}</span>
-    </>
-  );
-}
+/* ── Meal Data ── */
+const mealData: MealEntry[] = [
+  { day: "Day 1", meal: "저녁", theme: "屋台 야타이", restaurant: "小金ちゃん + 나카스 야타이" },
+  { day: "Day 2", meal: "점심", theme: "天ぷら 텐푸라", restaurant: "天ぷら ひらお" },
+  { day: "Day 2", meal: "저녁", theme: "もつ鍋 모츠나베", restaurant: "もつ鍋 やま中" },
+  { day: "Day 3", meal: "점심", theme: "湯布院名物 유후인 명물", restaurant: "由布まぶし 心" },
+  { day: "Day 3", meal: "저녁", theme: "焼き鳥 야키토리", restaurant: "かわ屋 薬院本店" },
+  { day: "Day 4", meal: "점심", theme: "うどん 우동", restaurant: "うどん平" },
+  { day: "Day 4", meal: "저녁", theme: "寿司 스시", restaurant: "ひょうたん寿司" },
+  { day: "Day 5", meal: "점심", theme: "ラーメン 라멘", restaurant: "博多一双" },
+];
 
 function ReferenceLink({ title, url }: { title: string; url: string }) {
   return (
@@ -666,11 +638,3 @@ function ReferenceLink({ title, url }: { title: string; url: string }) {
   );
 }
 
-function CheckItem({ label }: { label: string }) {
-  return (
-    <div className="flex items-center gap-3">
-      <span className="w-5 h-5 rounded-md border-2 border-foreground/20 shrink-0" />
-      <span className="text-sm">{label}</span>
-    </div>
-  );
-}
