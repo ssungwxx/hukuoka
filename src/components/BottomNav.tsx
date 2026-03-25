@@ -9,11 +9,10 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: 'flights', icon: '✈️', label: '항공' },
+  { id: 'travel', icon: '✈️', label: '교통' },
   { id: 'schedule', icon: '📅', label: '일정' },
   { id: 'budget', icon: '💰', label: '예산' },
-  { id: 'places', icon: '📍', label: '장소' },
-  { id: 'checklist', icon: '✅', label: '체크' },
+  { id: 'checklist', icon: '✅', label: '준비' },
 ];
 
 export function BottomNav() {
@@ -36,27 +35,17 @@ export function BottomNav() {
   useEffect(() => {
     // All section IDs we want to track (not just those in the nav)
     const allSectionIds = [
-      'flights',
-      'accommodation',
-      'budget',
+      'travel',
       'schedule',
-      'transport',
-      'meals',
-      'places',
-      'links',
+      'budget',
       'checklist',
     ];
 
     // Map each section ID to its corresponding nav item ID (if any)
     const sectionToNav: Record<string, string> = {
-      flights: 'flights',
-      accommodation: 'flights', // closest nav item
-      budget: 'budget',
+      travel: 'travel',
       schedule: 'schedule',
-      transport: 'schedule',
-      meals: 'schedule',
-      places: 'places',
-      links: 'places',
+      budget: 'budget',
       checklist: 'checklist',
     };
 

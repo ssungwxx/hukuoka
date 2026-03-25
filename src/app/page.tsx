@@ -1,7 +1,6 @@
 import { FlightCard } from "@/components/FlightCard";
 import { DaySchedule } from "@/components/DaySchedule";
 import type { ScheduleItem } from "@/components/DaySchedule";
-import { PlaceCard } from "@/components/PlaceCard";
 import { SectionTitle } from "@/components/SectionTitle";
 import { TransportInfo } from "@/components/TransportInfo";
 import type { TransportRoute } from "@/components/TransportInfo";
@@ -17,10 +16,10 @@ export default function Home() {
       {/* Hero */}
       <Hero />
 
-      {/* 항공편 */}
-      <section id="flights" className="mb-12">
-        <SectionTitle icon="✈️" title="항공편" />
-        <div className="grid gap-4 sm:grid-cols-2">
+      {/* 교통·숙소 */}
+      <section id="travel" className="mb-12">
+        <SectionTitle icon="✈️" title="항공·교통" />
+        <div className="grid gap-4 sm:grid-cols-2 mb-6">
           <FlightCard
             direction="출발"
             airline="대한항공"
@@ -40,29 +39,25 @@ export default function Home() {
             color="warm"
           />
         </div>
-      </section>
 
-      {/* 숙소 */}
-      <section id="accommodation" className="mb-12">
-        <SectionTitle icon="🏨" title="숙소" />
-        <div className="rounded-2xl border-2 border-dashed border-foreground/20 p-8 text-center text-foreground/50">
-          <p className="text-2xl mb-2">🔍</p>
+        <div className="rounded-2xl border-2 border-dashed border-foreground/20 p-6 text-center text-foreground/50 mb-6">
+          <p className="text-2xl mb-2">🏨</p>
           <p className="font-medium">숙소 미정</p>
           <p className="text-sm mt-1">하카타역 or 텐진 근처 추천</p>
         </div>
-      </section>
 
-      {/* 예산 요약 */}
-      <section id="budget" className="mb-12">
-        <SectionTitle icon="💰" title="예산 요약 (1인 기준)" />
-        <BudgetSection
-          total={{ label: "합계 (숙소 제외)", amount: "~¥28,500", detail: "약 26만원 (환율 ¥100=₩900 기준)" }}
-          items={[
-            { label: "교통비 총합", amount: "~¥7,800", detail: "공항↔시내, 시내이동, 기타큐슈 왕복 포함", icon: "🚇" },
-            { label: "식비 총합", amount: "~¥18,200", detail: "9끼 식사 (야타이~가라토시장 초밥까지)", icon: "🍽️" },
-            { label: "액티비티", amount: "~¥2,500", detail: "클라이밍 (맥주공장 무료)", icon: "🎯" },
-          ]}
-        />
+        <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] p-5 space-y-4">
+          <div>
+            <h3 className="font-semibold text-sm mb-2">🚇 IC 카드</h3>
+            <p className="text-sm text-foreground/60">
+              はやかけん(하야카켄), nimoca, SUGOCA 사용 가능. 한국 Suica/ICOCA도 호환됨. 모바일 Suica 있으면 별도 구매 불필요. 없으면 공항 지하철역에서 はやかけん 구매 (보증금 ¥500).
+            </p>
+          </div>
+          <div className="border-t border-foreground/[0.06] pt-4">
+            <h3 className="font-semibold text-sm mb-2">주요 구간 요금 (검증 완료)</h3>
+            <TransportInfo rows={transportRoutes} />
+          </div>
+        </div>
       </section>
 
       {/* 일정 */}
@@ -120,140 +115,33 @@ export default function Home() {
             transportCost="~¥3,700"
             mapUrl="https://www.google.com/maps/dir/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/福岡空港国際線ターミナル"
             items={day5Items}
-            note="💡 가라토시장 활きいき馬関街는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장"
+            note="💡 가라토시장 活きいき馬関街는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장"
           />
         </div>
-      </section>
 
-      {/* 교통 정보 */}
-      <section id="transport" className="mb-12">
-        <SectionTitle icon="🚇" title="교통 안내" />
-        <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] p-5 space-y-4">
-          <div>
-            <h3 className="font-semibold text-sm mb-2">IC 카드</h3>
-            <p className="text-sm text-foreground/60">
-              はやかけん(하야카켄), nimoca, SUGOCA 사용 가능. 한국 Suica/ICOCA도 호환됨. 모바일 Suica 있으면 별도 구매 불필요. 없으면 공항 지하철역에서 はやかけん 구매 (보증금 ¥500).
-            </p>
+        <div className="mt-8">
+          <h3 className="text-base font-semibold mb-3">🍽️ 식사 테마 분배</h3>
+          <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] overflow-hidden">
+            <MealTable meals={mealData} />
           </div>
-          <div className="border-t border-foreground/[0.06] pt-4">
-            <h3 className="font-semibold text-sm mb-2">주요 구간 요금 (검증 완료)</h3>
-            <TransportInfo rows={transportRoutes} />
-          </div>
+          <p className="text-xs text-foreground/40 mt-2">* 9가지 먹거리 테마를 중복 없이 분배 (후쿠오카 + 기타큐슈·시모노세키)</p>
         </div>
       </section>
 
-      {/* 식사 테마 분배 */}
-      <section id="meals" className="mb-12">
-        <SectionTitle icon="🍽️" title="식사 테마 분배" />
-        <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] overflow-hidden">
-          <MealTable meals={mealData} />
-        </div>
-        <p className="text-xs text-foreground/40 mt-2">* 9가지 먹거리 테마를 중복 없이 분배 (후쿠오카 + 기타큐슈·시모노세키)</p>
+      {/* 예산 요약 */}
+      <section id="budget" className="mb-12">
+        <SectionTitle icon="💰" title="예산 요약 (1인 기준)" />
+        <BudgetSection
+          total={{ label: "합계 (숙소 제외)", amount: "~¥28,500", detail: "약 26만원 (환율 ¥100=₩900 기준)" }}
+          items={[
+            { label: "교통비 총합", amount: "~¥7,800", detail: "공항↔시내, 시내이동, 기타큐슈 왕복 포함", icon: "🚇" },
+            { label: "식비 총합", amount: "~¥18,200", detail: "9끼 식사 (야타이~가라토시장 초밥까지)", icon: "🍽️" },
+            { label: "액티비티", amount: "~¥2,500", detail: "클라이밍 (맥주공장 무료)", icon: "🎯" },
+          ]}
+        />
       </section>
 
-      {/* 방문 예정지 */}
-      <section id="places" className="mb-12">
-        <SectionTitle icon="📍" title="방문 예정지" />
-        <div className="grid gap-4 sm:grid-cols-2">
-          <PlaceCard
-            emoji="🌸"
-            title="벚꽃 명소 (Day 2)"
-            description="마이즈루 공원 (~1,000그루), 니시 공원 (~1,300그루, 명소100선), 오호리 공원. 3월 말~4월 초 만개 시기."
-            tag="필수"
-          />
-          <PlaceCard
-            emoji="🧗"
-            title="Bare Hands 클라이밍 (Day 4)"
-            description="城南区七隈 · 평일 13:00~23:00 · 금요휴무 · 초회 등록 필요 · 신발 렌탈 ~¥300"
-            tag="필수"
-            link="https://barehands.biz/english/"
-          />
-          <PlaceCard
-            emoji="🥚"
-            title="다마고치 쇼핑 (Day 2)"
-            description="요도바시카메라 하카타 (하카타역 직결), 아니메이트 텐진, 돈키호테 나카스점"
-            tag="필수"
-            link="https://www.instagram.com/reel/DUX7dtRklCH"
-          />
-          <PlaceCard
-            emoji="🛍️"
-            title="쇼핑 스팟"
-            description="텐진 지하상가 (150개 매장, ~20:00), 돈키호테 나카스 (24h), 하카타 한큐"
-            tag="필수"
-            link="https://blog.naver.com/muk_dori30/223488718710"
-          />
-          <PlaceCard
-            emoji="🏬"
-            title="캐널시티 하카타 (Day 2)"
-            description="10:00~21:00(매장) · 분수쇼 30분 간격 · 5F 라멘 스타디움 · 하카타역 도보 10분"
-            tag="필수"
-          />
-          <PlaceCard
-            emoji="🍜"
-            title="나카스 야타이 거리 (Day 1)"
-            description="18:00~02:00 · 야키라멘, 오뎅, 야키토리 · 小金ちゃん(텐진), 나카스 강변 야타이"
-            tag="필수"
-          />
-          <PlaceCard
-            emoji="🏛️"
-            title="기타큐슈 모지코 & 가라토시장 (Day 5)"
-            description="모지코 레트로 · 바나나카레 · 간몬해협 도보터널 · 가라토시장 초밥 (금요일 운영!) · 왕복 ~¥3,400"
-            tag="필수"
-          />
-          <PlaceCard
-            emoji="🍺"
-            title="키린 맥주 공장 (Day 4)"
-            description="朝倉市 · 무료 견학+시음 · 약 80분 · 사전 예약 필수 (3/1 오픈) · 편도 ~1.5시간"
-            tag="필수"
-            link="https://www.kirin.co.jp/experience/factory/fukuoka/"
-          />
-        </div>
-      </section>
-
-      {/* 참고 링크 */}
-      <section id="links" className="mb-12">
-        <SectionTitle icon="🔗" title="참고 링크" />
-        <div className="space-y-3">
-          <ReferenceLink
-            title="唐戸市場 공식 (가라토시장)"
-            url="https://www.karatoichiba.com/"
-          />
-          <ReferenceLink
-            title="키린 맥주 공장 견학 예약"
-            url="https://www.kirin.co.jp/experience/factory/fukuoka/"
-          />
-          <ReferenceLink
-            title="もつ鍋 やま中 공식"
-            url="https://motsunabe-yamanaka.com/en/"
-          />
-          <ReferenceLink
-            title="天ぷら ひらお 공식"
-            url="https://www.hirao-foods.net/"
-          />
-          <ReferenceLink
-            title="Bare Hands 클라이밍 공식"
-            url="https://barehands.biz/english/"
-          />
-          <ReferenceLink
-            title="門司港レトロ 관광 안내"
-            url="https://www.mojiko.info/"
-          />
-          <ReferenceLink
-            title="후쿠오카 벚꽃 명소 가이드"
-            url="https://blog.naver.com/hoff_/223795180538"
-          />
-          <ReferenceLink
-            title="다마고치 쇼핑 정보"
-            url="https://www.instagram.com/reel/DUX7dtRklCH"
-          />
-          <ReferenceLink
-            title="후쿠오카 쇼핑 가이드"
-            url="https://blog.naver.com/muk_dori30/223488718710"
-          />
-        </div>
-      </section>
-
-      {/* 준비물 체크리스트 */}
+      {/* 준비 */}
       <section id="checklist">
         <SectionTitle icon="✅" title="준비 체크리스트" />
         <ChecklistSection
@@ -271,6 +159,48 @@ export default function Home() {
             { label: "여권 (면세 쇼핑 시 필요)", category: "서류" },
           ]}
         />
+
+        <div className="mt-8">
+          <h3 className="text-base font-semibold mb-3">🔗 참고 링크</h3>
+          <div className="space-y-3">
+            <ReferenceLink
+              title="唐戸市場 공식 (가라토시장)"
+              url="https://www.karatoichiba.com/"
+            />
+            <ReferenceLink
+              title="키린 맥주 공장 견학 예약"
+              url="https://www.kirin.co.jp/experience/factory/fukuoka/"
+            />
+            <ReferenceLink
+              title="もつ鍋 やま中 공식"
+              url="https://motsunabe-yamanaka.com/en/"
+            />
+            <ReferenceLink
+              title="天ぷら ひらお 공식"
+              url="https://www.hirao-foods.net/"
+            />
+            <ReferenceLink
+              title="Bare Hands 클라이밍 공식"
+              url="https://barehands.biz/english/"
+            />
+            <ReferenceLink
+              title="門司港レトロ 관광 안내"
+              url="https://www.mojiko.info/"
+            />
+            <ReferenceLink
+              title="후쿠오카 벚꽃 명소 가이드"
+              url="https://blog.naver.com/hoff_/223795180538"
+            />
+            <ReferenceLink
+              title="다마고치 쇼핑 정보"
+              url="https://www.instagram.com/reel/DUX7dtRklCH"
+            />
+            <ReferenceLink
+              title="후쿠오카 쇼핑 가이드"
+              url="https://blog.naver.com/muk_dori30/223488718710"
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
@@ -574,7 +504,7 @@ const day5Items: ScheduleItem[] = [
     time: "11:15",
     emoji: "🍣",
     text: "가라토시장 초밥 (唐戸市場)",
-    detail: "금요일 활きいき馬関街 운영! · 신선한 초밥을 골라 사서 바다 보며 먹기 · 복어(ふぐ)·참치·광어 등 시모노세키 직송 · 금~일·공휴일 10:00~15:00",
+    detail: "금요일 活きいき馬関街 운영! · 신선한 초밥을 골라 사서 바다 보며 먹기 · 복어(ふぐ)·참치·광어 등 시모노세키 직송 · 금~일·공휴일 10:00~15:00",
     cost: "~¥1,500~2,500",
     location: { lat: 33.9582, lng: 130.9436 },
     restaurant: {
@@ -669,4 +599,3 @@ function ReferenceLink({ title, url }: { title: string; url: string }) {
     </a>
   );
 }
-
