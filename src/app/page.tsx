@@ -285,6 +285,7 @@ const day1Items: ScheduleItem[] = [
     emoji: "✈️",
     text: "후쿠오카 공항 도착 (국제선 터미널)",
     detail: "입국심사·수하물 수령 약 30~45분 소요",
+    location: { lat: 33.5859, lng: 130.4517 },
   },
   {
     time: "16:00",
@@ -298,6 +299,7 @@ const day1Items: ScheduleItem[] = [
     text: "지하철 공항선 → 하카타역",
     detail: "2정거장, 5분 소요",
     cost: "¥260",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
     time: "16:40",
@@ -310,6 +312,7 @@ const day1Items: ScheduleItem[] = [
     text: "텐진 야타이 小金ちゃん (코킨짱)",
     detail: "焼きラーメン(야키라멘) 발상지 · 1967년 창업 · 오야후코도오리 입구 · 21~22시 피크타임에는 30~40분 대기",
     cost: "¥1,500~2,500",
+    location: { lat: 33.5913, lng: 130.3985 },
     restaurant: {
       signature: "焼きラーメン (야키라멘)",
       tabelog: { rating: "3.51", url: "https://tabelog.com/fukuoka/A4001/A400103/40000201/" },
@@ -321,6 +324,7 @@ const day1Items: ScheduleItem[] = [
     emoji: "🌃",
     text: "나카스 강변 야경 산책",
     detail: "하카타역에서 나카스까지 도보 약 12~15분",
+    location: { lat: 33.5943, lng: 130.4058 },
   },
   {
     time: "20:30",
@@ -328,6 +332,7 @@ const day1Items: ScheduleItem[] = [
     text: "나카스 야타이 호핑 (2차)",
     detail: "라멘, 오뎅, 야키토리 · 1인 최소 음료 1잔 + 음식 1개 주문이 에티켓",
     cost: "¥1,000~2,000",
+    location: { lat: 33.5943, lng: 130.4058 },
   },
 ];
 
@@ -339,18 +344,21 @@ const day2Items: ScheduleItem[] = [
     text: "오호리 공원 산책",
     detail: "지하철 大濠公園역 하차 · 호수 둘레 산책로 · 스타벅스 호수뷰",
     cost: "¥260",
+    location: { lat: 33.5864, lng: 130.3792 },
   },
   {
     time: "10:00",
     emoji: "🌸",
     text: "마이즈루 공원 벚꽃 (후쿠오카성 유적)",
     detail: "오호리 공원에서 도보 10분 · 벚나무 약 1,000그루 · 福岡城さくらまつり 개최 기간 (야간 라이트업, 입장 ~¥300) · 무료 입장 (낮)",
+    location: { lat: 33.5850, lng: 130.3832 },
   },
   {
     time: "11:30",
     emoji: "🌸",
     text: "니시 공원 벚꽃",
     detail: "마이즈루 공원에서 도보 25~30분 또는 버스 ¥230 · 벚나무 약 1,300그루 · 일본 벚꽃 명소 100선 · 하카타만 전망",
+    location: { lat: 33.5946, lng: 130.3729 },
   },
   {
     time: "12:30",
@@ -358,6 +366,7 @@ const day2Items: ScheduleItem[] = [
     text: "점심: 天ぷら ひらお 아크로스 후쿠오카점",
     detail: "아크로스 후쿠오카 B2F · 10:30~21:00 · 무료 반찬바 (明太子·いくら·塩辛) 전설급 · 예약 불가, 11시 전이나 13:30 이후 추천",
     cost: "¥800~1,200",
+    location: { lat: 33.5896, lng: 130.4003 },
     restaurant: {
       signature: "天ぷら定食 (텐푸라 정식)",
       tabelog: { rating: "3.61", url: "https://tabelog.com/fukuoka/A4001/A400103/40049747/" },
@@ -369,18 +378,21 @@ const day2Items: ScheduleItem[] = [
     emoji: "🛍️",
     text: "텐진 지하상가 쇼핑 (天神地下街)",
     detail: "텐진역 직결 · 약 150개 매장 · 10:00~20:00 · 유럽풍 벽돌 아치 디자인 · 패션, 코스메틱, 잡화",
+    location: { lat: 33.5905, lng: 130.3990 },
   },
   {
     time: "16:00",
     emoji: "🏬",
     text: "캐널시티 하카타",
     detail: "텐진에서 도보 10~12분 · 10:00~21:00(매장)/~23:00(식당) · 분수쇼 30분 간격 · 5F 라멘 스타디움",
+    location: { lat: 33.5895, lng: 130.4112 },
   },
   {
     time: "17:30",
     emoji: "🥚",
     text: "다마고치 쇼핑",
     detail: "요도바시카메라 하카타 (하카타역 직결, 9:30~22:00) 또는 아니메이트 텐진 (10:00~21:00) · 돈키호테 나카스점에서도 구매 가능",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
     time: "18:30",
@@ -388,6 +400,7 @@ const day2Items: ScheduleItem[] = [
     text: "저녁: もつ鍋 やま中 赤坂店 (모츠나베 야마나카)",
     detail: "赤坂역 도보 3분 · 평일 16:00~23:00(L.O.22:30) · 미소맛 모츠나베가 인기 No.1 · 마무리에 ちゃんぽん麺 추가 · 예약 필수",
     cost: "¥4,000~5,000",
+    location: { lat: 33.5879, lng: 130.3925 },
     restaurant: {
       signature: "みそ味もつ鍋 (미소 모츠나베)",
       tabelog: { rating: "3.70", url: "https://tabelog.com/fukuoka/A4001/A400104/40004383/" },
@@ -404,18 +417,21 @@ const day3Items: ScheduleItem[] = [
     text: "유후인노모리 1호 출발 (하카타역)",
     detail: "JR 큐다이 본선 경유 · 전석 지정석 · 편도 약 2시간 14분 · 3/1부터 예약 오픈 (1개월 전) · 벚꽃 시즌 매진 주의! · 九州ネットきっぷ 할인 시 ¥5,600",
     cost: "편도 ¥6,130",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
     time: "11:31",
     emoji: "♨️",
     text: "유후인역 도착",
     detail: "역사 건물 자체도 포토스팟 · 유후다케(由布岳) 산 전망",
+    location: { lat: 33.2683, lng: 131.3633 },
   },
   {
     time: "11:40",
     emoji: "🚶",
     text: "유노츠보 거리 산책 & 식べ歩き",
     detail: "역→긴린코 호수까지 약 1.2km(도보 20~25분) · B-speak 롤케이크(¥1,500, 오전 매진 주의) · Milch 치즈케이크(¥300~500) · 크로켓(¥200~300) · 유후인 플로랄 빌리지",
+    location: { lat: 33.2650, lng: 131.3700 },
   },
   {
     time: "12:30",
@@ -423,6 +439,7 @@ const day3Items: ScheduleItem[] = [
     text: "점심: 由布まぶし 心 역전점 (유후마부시 신)",
     detail: "역에서 도보 2분 · 10:30~20:30 · 불정기 휴무(전화 확인 추천) · 豊後牛 마부시를 3가지 방식으로 먹기 (그대로/양념/오차즈케)",
     cost: "¥2,500~3,500",
+    location: { lat: 33.2680, lng: 131.3627 },
     restaurant: {
       signature: "豊後牛まぶし (분고규 마부시)",
       tabelog: { rating: "3.47", url: "https://tabelog.com/oita/A4402/A440201/44005142/" },
@@ -434,6 +451,7 @@ const day3Items: ScheduleItem[] = [
     emoji: "🏞️",
     text: "긴린코 호수 산책",
     detail: "온천수가 유입되어 아침 물안개가 유명 · 天祖神社 · 호수 일주 약 20~30분",
+    location: { lat: 33.2618, lng: 131.3740 },
   },
   {
     time: "14:00",
@@ -441,12 +459,14 @@ const day3Items: ScheduleItem[] = [
     text: "당일 온천: 夢想園 (무소엔)",
     detail: "대형 노천온천 · 유후다케 전망 · 남녀 분리탕",
     cost: "¥1,000~1,500",
+    location: { lat: 33.2590, lng: 131.3600 },
   },
   {
     time: "15:30",
     emoji: "🛍️",
     text: "유노츠보 거리 쇼핑 마무리",
     detail: "가보수 시트러스 제품, 유후인 푸딩 등 오이타현 특산품 구매",
+    location: { lat: 33.2650, lng: 131.3700 },
   },
   {
     time: "17:05",
@@ -454,6 +474,7 @@ const day3Items: ScheduleItem[] = [
     text: "유후인노모리 6호 복귀",
     detail: "유후인역 17:05 → 하카타역 19:16 도착",
     cost: "편도 ¥6,130",
+    location: { lat: 33.2683, lng: 131.3633 },
   },
   {
     time: "19:30",
@@ -461,6 +482,7 @@ const day3Items: ScheduleItem[] = [
     text: "저녁: かわ屋 薬院本店 (카와야)",
     detail: "薬院역 도보 5~6분 · 焼き鳥 WEST 百名店 2024 선정 · 6일간 반복 굽기로 만드는 극강 바삭 닭껍질 · 豚バラ(돼지삼겹 꼬치)도 필수 · 예약 추천",
     cost: "¥2,500~4,000",
+    location: { lat: 33.5813, lng: 130.3979 },
     restaurant: {
       signature: "とりかわ (닭껍질 꼬치)",
       tabelog: { rating: "3.72", url: "https://tabelog.com/fukuoka/A4001/A400104/40005228/" },
@@ -477,6 +499,7 @@ const day4Items: ScheduleItem[] = [
     text: "하카타 출발 → 키린 맥주 후쿠오카 공장",
     detail: "하카타→텐진(지하철 ¥210) → 니시테츠 텐진→오고리(특급 37분, ¥530) → 아마기철도 오고리→타치아라이(15분, ¥280) → 도보 15분 또는 무료 셔틀",
     cost: "편도 ¥1,020",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
     time: "10:00",
@@ -484,6 +507,7 @@ const day4Items: ScheduleItem[] = [
     text: "키린 맥주 공장 견학 투어",
     detail: "朝倉市馬田3601 · 무료 · 약 80분 · 一番搾り 제조공정 견학 + 맥주 시음 2~3잔 포함 · 사전 예약 필수 (3/1부터 오픈) · 목요일 운영 확인됨",
     cost: "무료",
+    location: { lat: 33.3639, lng: 130.7247 },
   },
   {
     time: "11:30",
@@ -498,6 +522,7 @@ const day4Items: ScheduleItem[] = [
     text: "점심: うどん平 (우동 타이라)",
     detail: "博多区住吉5-10-7 · 하카타역 도보 11분 · 月~金 11:30~16:00 · 일·공휴일 정기 휴무 · 부드러운 하카타식 면발 · 예약 불가, 점심 줄 있음",
     cost: "¥600~1,000",
+    location: { lat: 33.5853, lng: 130.4175 },
     restaurant: {
       signature: "ごぼう天うどん (우엉튀김 우동)",
       tabelog: { rating: "3.69", url: "https://tabelog.com/fukuoka/A4001/A400101/40052349/" },
@@ -517,6 +542,7 @@ const day4Items: ScheduleItem[] = [
     text: "Bare Hands 클라이밍 (ベアハンズ)",
     detail: "城南区七隈8-4-8 칠쿠마 패밀리프라자 내 · 평일 13:00~23:00 · 금요 정기휴무(목요 OK!) · 초회 등록 약 10분 · 신발 렌탈 가능",
     cost: "~¥2,000~2,500",
+    location: { lat: 33.5578, lng: 130.3658 },
   },
   {
     time: "17:30",
@@ -531,6 +557,7 @@ const day4Items: ScheduleItem[] = [
     text: "저녁: ひょうたん寿司 (효탄즈시)",
     detail: "天神2-10-20 新大閣ビル 2~3F · 11:30~15:00 / 17:00~21:30(L.O.21:00) · 큐슈산 신선 어패류 · 関サバ·活イカ(활오징어) 추천 · 3인 이상만 예약 가능, 2인 이하는 줄서기",
     cost: "¥3,000~5,000",
+    location: { lat: 33.5893, lng: 130.3987 },
     restaurant: {
       signature: "おまかせ寿司セット (오마카세 스시 세트)",
       tabelog: { rating: "3.63", url: "https://tabelog.com/fukuoka/A4001/A400103/40001153/" },
@@ -546,6 +573,7 @@ const day5Items: ScheduleItem[] = [
     emoji: "🛍️",
     text: "돈키호테 나카스점 / 드럭스토어 쇼핑",
     detail: "中洲3-7-24 · 24시간 영업 · 면세 가능 (여권 지참, ¥5,000 이상) · 과자, 화장품, 잡화 등",
+    location: { lat: 33.5936, lng: 130.4073 },
   },
   {
     time: "12:00",
@@ -553,6 +581,7 @@ const day5Items: ScheduleItem[] = [
     text: "마지막 라멘: 博多一双 (하카타 잇소)",
     detail: "하카타역 동쪽 도보 5분 · 11:00~24:00 · 泡系(아와케이) 톤코츠 라멘 · 크리미한 거품 육수가 특징 · 替え玉(카에다마) 필수 · 대기 30분+",
     cost: "¥800~1,100",
+    location: { lat: 33.5901, lng: 130.4250 },
     restaurant: {
       signature: "泡系豚骨ラーメン (아와케이 톤코츠 라멘)",
       tabelog: { rating: "3.72", url: "https://tabelog.com/fukuoka/A4001/A400101/40032701/" },
@@ -564,6 +593,7 @@ const day5Items: ScheduleItem[] = [
     emoji: "🛍️",
     text: "하카타역 주변 마지막 쇼핑",
     detail: "하카타 한큐 (10:00~20:00) · 마이몬 (1F 기념품) · 요도바시카메라 (9:30~22:00)",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
     time: "15:00",
@@ -593,6 +623,7 @@ const day5Items: ScheduleItem[] = [
     time: "20:40",
     emoji: "✈️",
     text: "후쿠오카 출발 → 인천 (이스타항공)",
+    location: { lat: 33.5859, lng: 130.4517 },
   },
 ];
 

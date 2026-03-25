@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { DayMap } from "./DayMap";
 
 export type ScheduleItem = {
   time: string;
@@ -8,6 +9,7 @@ export type ScheduleItem = {
   text: string;
   detail?: string;
   cost?: string;
+  location?: { lat: number; lng: number };
   restaurant?: {
     tabelog?: { rating: string; url: string };
     google?: { rating: string; url: string };
@@ -155,6 +157,10 @@ export function DaySchedule({
                 </div>
               </div>
             ))}
+          </div>
+          {/* Embedded map */}
+          <div className="px-4 sm:px-5 pb-3">
+            <DayMap items={items} />
           </div>
           {note && (
             <div className="px-4 sm:px-5 py-3 bg-warm-50 text-sm text-amber-700 border-t border-warm-200">
