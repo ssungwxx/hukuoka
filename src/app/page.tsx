@@ -56,11 +56,11 @@ export default function Home() {
       <section id="budget" className="mb-12">
         <SectionTitle icon="💰" title="예산 요약 (1인 기준)" />
         <BudgetSection
-          total={{ label: "합계 (숙소 제외)", amount: "~¥38,800", detail: "약 35만원 (환율 ¥100=₩900 기준)" }}
+          total={{ label: "합계 (숙소 제외)", amount: "~¥28,500", detail: "약 26만원 (환율 ¥100=₩900 기준)" }}
           items={[
-            { label: "교통비 총합", amount: "~¥16,800", detail: "공항↔시내, 시내이동, 유후인 왕복 포함", icon: "🚇" },
-            { label: "식비 총합", amount: "~¥18,000", detail: "8끼 식사 (야타이~스시까지)", icon: "🍽️" },
-            { label: "액티비티", amount: "~¥4,000", detail: "클라이밍 + 온천 (맥주공장 무료)", icon: "🎯" },
+            { label: "교통비 총합", amount: "~¥7,800", detail: "공항↔시내, 시내이동, 기타큐슈 왕복 포함", icon: "🚇" },
+            { label: "식비 총합", amount: "~¥18,200", detail: "9끼 식사 (야타이~가라토시장 초밥까지)", icon: "🍽️" },
+            { label: "액티비티", amount: "~¥2,500", detail: "클라이밍 (맥주공장 무료)", icon: "🎯" },
           ]}
         />
       </section>
@@ -94,11 +94,11 @@ export default function Home() {
           <DaySchedule
             day={3}
             date="4월 1일 (수)"
-            title="유후인 온천 당일치기"
-            transportCost="~¥12,520"
-            mapUrl="https://www.google.com/maps/dir/博多駅/由布院駅/湯の坪街道+由布院/由布まぶし心+由布院/金鱗湖/夢想園+由布院/由布院駅/博多駅/かわ屋+薬院+福岡"
+            title="후쿠오카 여유 관광 & 쇼핑"
+            transportCost="~¥500"
+            mapUrl="https://www.google.com/maps/dir/博多駅/ドン・キホーテ中洲店/博多一双+博多駅東本店/博多駅/かわ屋+薬院+福岡"
             items={day3Items}
-            note="💡 유후인은 해발 ~450m 분지로 후쿠오카보다 기온이 낮음. 4월 초 낮 15~18°C / 밤 5~8°C — 겉옷 필수. 유후인노모리 예약은 3/1(일) 오전에!"
+            note="💡 전날(벚꽃)과 다음 날(맥주공장+클라이밍) 사이 재충전 데이. 돈키호테 면세는 여권 필수 · ¥5,000 이상 구매 시"
           />
 
           {/* Day 4 */}
@@ -116,11 +116,11 @@ export default function Home() {
           <DaySchedule
             day={5}
             date="4월 3일 (금)"
-            title="마지막 쇼핑 & 귀국"
-            transportCost="~¥470"
-            mapUrl="https://www.google.com/maps/dir/博多駅/ドン・キホーテ中洲店/博多一双+博多駅東本店/博多駅/福岡空港国際線ターミナル"
+            title="기타큐슈 (모지코 & 가라토시장) + 귀국"
+            transportCost="~¥3,700"
+            mapUrl="https://www.google.com/maps/dir/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/福岡空港国際線ターミナル"
             items={day5Items}
-            note="💡 국제선은 2시간 전 도착 권장. 숙소에서 17:00 이전 출발. 면세 쇼핑은 공항 내에서도 가능"
+            note="💡 가라토시장 활きいき馬関街는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장"
           />
         </div>
       </section>
@@ -148,7 +148,7 @@ export default function Home() {
         <div className="rounded-2xl bg-foreground/[0.03] border border-foreground/[0.06] overflow-hidden">
           <MealTable meals={mealData} />
         </div>
-        <p className="text-xs text-foreground/40 mt-2">* 8가지 후쿠오카 먹거리 테마를 중복 없이 분배</p>
+        <p className="text-xs text-foreground/40 mt-2">* 9가지 먹거리 테마를 중복 없이 분배 (후쿠오카 + 기타큐슈·시모노세키)</p>
       </section>
 
       {/* 방문 예정지 */}
@@ -195,9 +195,9 @@ export default function Home() {
             tag="필수"
           />
           <PlaceCard
-            emoji="♨️"
-            title="유후인 온천 (Day 3)"
-            description="유후인노모리 왕복 ¥12,260 · 긴린코 호수 · 유노츠보 거리 · 夢想園 노천온천"
+            emoji="🏛️"
+            title="기타큐슈 모지코 & 가라토시장 (Day 5)"
+            description="모지코 레트로 · 바나나카레 · 간몬해협 도보터널 · 가라토시장 초밥 (금요일 운영!) · 왕복 ~¥3,400"
             tag="필수"
           />
           <PlaceCard
@@ -215,8 +215,8 @@ export default function Home() {
         <SectionTitle icon="🔗" title="참고 링크" />
         <div className="space-y-3">
           <ReferenceLink
-            title="유후인노모리 예약 (JR큐슈)"
-            url="https://www.jrkyushu.co.jp/trains/yufuinnomori/"
+            title="唐戸市場 공식 (가라토시장)"
+            url="https://www.karatoichiba.com/"
           />
           <ReferenceLink
             title="키린 맥주 공장 견학 예약"
@@ -235,8 +235,8 @@ export default function Home() {
             url="https://barehands.biz/english/"
           />
           <ReferenceLink
-            title="由布まぶし 心 공식"
-            url="https://yufumabushi-shin.com/"
+            title="門司港レトロ 관광 안내"
+            url="https://www.mojiko.info/"
           />
           <ReferenceLink
             title="후쿠오카 벚꽃 명소 가이드"
@@ -259,7 +259,6 @@ export default function Home() {
         <ChecklistSection
           items={[
             { label: "숙소 예약", category: "예약" },
-            { label: "유후인노모리 열차 예약 (3/1 오전 오픈!)", category: "예약" },
             { label: "키린 맥주 공장 투어 예약 (3/1 오픈)", category: "예약" },
             { label: "もつ鍋 やま中 저녁 예약 (3/31)", category: "예약" },
             { label: "ひょうたん寿司 확인 (3인 이상 시 예약)", category: "예약" },
@@ -267,10 +266,9 @@ export default function Home() {
             { label: "항공편 웹 체크인", category: "준비물" },
             { label: "Wi-Fi / 유심 준비", category: "준비물" },
             { label: "여행자 보험", category: "준비물" },
-            { label: "엔화 환전 (현금 필요: 야타이·우동 등)", category: "준비물" },
+            { label: "엔화 환전 (현금 필요: 야타이·우동·가라토시장 등)", category: "준비물" },
             { label: "IC카드 준비 (모바일 Suica or 현지 구매)", category: "준비물" },
             { label: "여권 (면세 쇼핑 시 필요)", category: "서류" },
-            { label: "겉옷 (유후인 기온 5~18°C)", category: "준비물" },
           ]}
         />
       </section>
@@ -412,72 +410,40 @@ const day2Items: ScheduleItem[] = [
 /* ── Day 3 ── */
 const day3Items: ScheduleItem[] = [
   {
-    time: "09:17",
-    emoji: "🚃",
-    text: "유후인노모리 1호 출발 (하카타역)",
-    detail: "JR 큐다이 본선 경유 · 전석 지정석 · 편도 약 2시간 14분 · 3/1부터 예약 오픈 (1개월 전) · 벚꽃 시즌 매진 주의! · 九州ネットきっぷ 할인 시 ¥5,600",
-    cost: "편도 ¥6,130",
-    location: { lat: 33.5897, lng: 130.4207 },
+    time: "10:00",
+    emoji: "🛍️",
+    text: "돈키호테 나카스점 / 드럭스토어 쇼핑",
+    detail: "中洲3-7-24 · 24시간 영업 · 면세 가능 (여권 지참, ¥5,000 이상) · 과자, 화장품, 잡화 등",
+    location: { lat: 33.5936, lng: 130.4073 },
   },
   {
-    time: "11:31",
-    emoji: "♨️",
-    text: "유후인역 도착",
-    detail: "역사 건물 자체도 포토스팟 · 유후다케(由布岳) 산 전망",
-    location: { lat: 33.2683, lng: 131.3633 },
-  },
-  {
-    time: "11:40",
-    emoji: "🚶",
-    text: "유노츠보 거리 산책 & 식べ歩き",
-    detail: "역→긴린코 호수까지 약 1.2km(도보 20~25분) · B-speak 롤케이크(¥1,500, 오전 매진 주의) · Milch 치즈케이크(¥300~500) · 크로켓(¥200~300) · 유후인 플로랄 빌리지",
-    location: { lat: 33.2650, lng: 131.3700 },
-  },
-  {
-    time: "12:30",
-    emoji: "🍽️",
-    text: "점심: 由布まぶし 心 역전점 (유후마부시 신)",
-    detail: "역에서 도보 2분 · 10:30~20:30 · 불정기 휴무(전화 확인 추천) · 豊後牛 마부시를 3가지 방식으로 먹기 (그대로/양념/오차즈케)",
-    cost: "¥2,500~3,500",
-    location: { lat: 33.2680, lng: 131.3627 },
+    time: "12:00",
+    emoji: "🍜",
+    text: "점심: 博多一双 (하카타 잇소)",
+    detail: "하카타역 동쪽 도보 5분 · 11:00~24:00 · 泡系(아와케이) 톤코츠 라멘 · 크리미한 거품 육수가 특징 · 替え玉(카에다마) 필수 · 대기 30분+",
+    cost: "¥800~1,100",
+    location: { lat: 33.5901, lng: 130.4250 },
     restaurant: {
-      signature: "豊後牛まぶし (분고규 마부시)",
-      tabelog: { rating: "3.47", url: "https://tabelog.com/oita/A4402/A440201/44005142/" },
-      google: { rating: "Map", url: "https://www.google.com/maps/search/由布まぶし+心+駅前支店" },
+      signature: "泡系豚骨ラーメン (아와케이 톤코츠 라멘)",
+      tabelog: { rating: "3.72", url: "https://tabelog.com/fukuoka/A4001/A400101/40032701/" },
+      google: { rating: "Map", url: "https://www.google.com/maps/search/博多一双+博多駅東本店" },
     },
   },
   {
     time: "13:30",
-    emoji: "🏞️",
-    text: "긴린코 호수 산책",
-    detail: "온천수가 유입되어 아침 물안개가 유명 · 天祖神社 · 호수 일주 약 20~30분",
-    location: { lat: 33.2618, lng: 131.3740 },
-  },
-  {
-    time: "14:00",
-    emoji: "♨️",
-    text: "당일 온천: 夢想園 (무소엔)",
-    detail: "대형 노천온천 · 유후다케 전망 · 남녀 분리탕",
-    cost: "¥1,000~1,500",
-    location: { lat: 33.2590, lng: 131.3600 },
-  },
-  {
-    time: "15:30",
     emoji: "🛍️",
-    text: "유노츠보 거리 쇼핑 마무리",
-    detail: "가보수 시트러스 제품, 유후인 푸딩 등 오이타현 특산품 구매",
-    location: { lat: 33.2650, lng: 131.3700 },
+    text: "하카타역 주변 쇼핑",
+    detail: "하카타 한큐 (10:00~20:00) · 마이몬 (1F 기념품) · 요도바시카메라 (9:30~22:00)",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
-    time: "17:05",
-    emoji: "🚃",
-    text: "유후인노모리 6호 복귀",
-    detail: "유후인역 17:05 → 하카타역 19:16 도착",
-    cost: "편도 ¥6,130",
-    location: { lat: 33.2683, lng: 131.3633 },
+    time: "15:00",
+    emoji: "☕",
+    text: "여유시간 / 카페 휴식",
+    detail: "하카타역 내 카페 또는 텐진 주변에서 여유롭게",
   },
   {
-    time: "19:30",
+    time: "19:00",
     emoji: "🍗",
     text: "저녁: かわ屋 薬院本店 (카와야)",
     detail: "薬院역 도보 5~6분 · 焼き鳥 WEST 百名店 2024 선정 · 6일간 반복 굽기로 만드는 극강 바삭 닭껍질 · 豚バラ(돼지삼겹 꼬치)도 필수 · 예약 추천",
@@ -569,42 +535,75 @@ const day4Items: ScheduleItem[] = [
 /* ── Day 5 ── */
 const day5Items: ScheduleItem[] = [
   {
-    time: "10:00",
-    emoji: "🛍️",
-    text: "돈키호테 나카스점 / 드럭스토어 쇼핑",
-    detail: "中洲3-7-24 · 24시간 영업 · 면세 가능 (여권 지참, ¥5,000 이상) · 과자, 화장품, 잡화 등",
-    location: { lat: 33.5936, lng: 130.4073 },
+    time: "08:00",
+    emoji: "🏨",
+    text: "숙소 체크아웃 · 짐 보관",
+    detail: "호텔 프론트에 짐 보관 요청 또는 하카타역 코인락커 이용 (¥300~700)",
   },
   {
-    time: "12:00",
-    emoji: "🍜",
-    text: "마지막 라멘: 博多一双 (하카타 잇소)",
-    detail: "하카타역 동쪽 도보 5분 · 11:00~24:00 · 泡系(아와케이) 톤코츠 라멘 · 크리미한 거품 육수가 특징 · 替え玉(카에다마) 필수 · 대기 30분+",
-    cost: "¥800~1,100",
-    location: { lat: 33.5901, lng: 130.4250 },
-    restaurant: {
-      signature: "泡系豚骨ラーメン (아와케이 톤코츠 라멘)",
-      tabelog: { rating: "3.72", url: "https://tabelog.com/fukuoka/A4001/A400101/40032701/" },
-      google: { rating: "Map", url: "https://www.google.com/maps/search/博多一双+博多駅東本店" },
-    },
-  },
-  {
-    time: "13:30",
-    emoji: "🛍️",
-    text: "하카타역 주변 마지막 쇼핑",
-    detail: "하카타 한큐 (10:00~20:00) · 마이몬 (1F 기념품) · 요도바시카메라 (9:30~22:00)",
+    time: "08:20",
+    emoji: "🚃",
+    text: "하카타 출발 → 모지코 (門司港)",
+    detail: "JR 가고시마본선 · 하카타→코쿠라→모지코 · 약 1시간 20분 · 직통 또는 코쿠라 환승",
+    cost: "편도 ~¥1,500",
     location: { lat: 33.5897, lng: 130.4207 },
   },
   {
-    time: "15:00",
-    emoji: "🏨",
-    text: "숙소 체크아웃 & 짐 정리",
+    time: "09:40",
+    emoji: "🏛️",
+    text: "모지코 레트로 지구 산책",
+    detail: "門司港駅(국가 중요문화재) · 구 모지세관 · 해협플라자 · 레트로한 서양식 건축물 거리",
+    location: { lat: 33.9478, lng: 130.9625 },
   },
   {
-    time: "16:00",
-    emoji: "☕",
-    text: "여유시간 / 카페 휴식",
-    detail: "하카타역 내 카페 또는 텐진 주변에서 마지막 여유",
+    time: "10:00",
+    emoji: "🍛",
+    text: "모지코 바나나카레 브런치",
+    detail: "門司港名物 焼きカレー · 바나나맨, 港のカレー家 등 · 모지코 레트로 지구 내 · 가볍게 브런치로 즐기고 가라토 초밥에 대비!",
+    cost: "~¥800~1,200",
+    location: { lat: 33.9478, lng: 130.9625 },
+  },
+  {
+    time: "10:40",
+    emoji: "🚶",
+    text: "간몬해협 도보터널 횡단 → 시모노세키",
+    detail: "모지코에서 터널 입구까지 도보 약 15분 · 関門トンネル人道 전장 780m · 도보 약 15분 · 무료 · 규슈↔혼슈를 걸어서 건너는 체험!",
+    location: { lat: 33.9611, lng: 130.9545 },
+  },
+  {
+    time: "11:15",
+    emoji: "🍣",
+    text: "가라토시장 초밥 (唐戸市場)",
+    detail: "금요일 활きいき馬関街 운영! · 신선한 초밥을 골라 사서 바다 보며 먹기 · 복어(ふぐ)·참치·광어 등 시모노세키 직송 · 금~일·공휴일 10:00~15:00",
+    cost: "~¥1,500~2,500",
+    location: { lat: 33.9582, lng: 130.9436 },
+    restaurant: {
+      signature: "市場直送 握り寿司 (시장 직송 초밥)",
+      google: { rating: "Map", url: "https://www.google.com/maps/search/唐戸市場+下関" },
+    },
+  },
+  {
+    time: "12:30",
+    emoji: "⛴️",
+    text: "간몬 연락선으로 모지코 복귀",
+    detail: "唐戸桟橋→門司港桟橋 · 약 5분 · 간몬해협 바다 위에서 관부연락선 기분!",
+    cost: "¥400",
+    location: { lat: 33.9582, lng: 130.9436 },
+  },
+  {
+    time: "13:00",
+    emoji: "🚃",
+    text: "모지코 출발 → 하카타 복귀",
+    detail: "JR 모지코→하카타 · 약 1시간 20분 · 직통 또는 코쿠라 환승",
+    cost: "편도 ~¥1,500",
+    location: { lat: 33.9467, lng: 130.9617 },
+  },
+  {
+    time: "14:30",
+    emoji: "🛍️",
+    text: "하카타역 도착 · 짐 회수",
+    detail: "코인락커 or 호텔에서 짐 회수 · 남은 시간 하카타역 주변 기념품 쇼핑",
+    location: { lat: 33.5897, lng: 130.4207 },
   },
   {
     time: "17:00",
@@ -637,7 +636,8 @@ const transportRoutes: TransportRoute[] = [
   { from: "텐진미나미역", to: "나나쿠마역", method: "지하철 나나쿠마선", time: "12분", cost: "¥300" },
   { from: "텐진역", to: "니시테츠 오고리", method: "니시테츠 특급", time: "37분", cost: "¥530" },
   { from: "오고리역", to: "타치아라이역", method: "아마기 철도", time: "15분", cost: "¥280" },
-  { from: "하카타역", to: "유후인역", method: "유후인노모리", time: "2시간 14분", cost: "¥6,130" },
+  { from: "하카타역", to: "모지코역", method: "JR 가고시마본선", time: "약 1시간 20분", cost: "~¥1,500" },
+  { from: "唐戸桟橋", to: "門司港桟橋", method: "간몬 연락선", time: "5분", cost: "¥400" },
   { from: "하카타역", to: "나카스", method: "도보", time: "12~15분", cost: "무료" },
   { from: "하카타역", to: "캐널시티", method: "도보", time: "10분", cost: "무료" },
   { from: "텐진", to: "캐널시티", method: "도보", time: "10~12분", cost: "무료" },
@@ -648,11 +648,12 @@ const mealData: MealEntry[] = [
   { day: "Day 1", meal: "저녁", theme: "屋台 야타이", restaurant: "小金ちゃん + 나카스 야타이" },
   { day: "Day 2", meal: "점심", theme: "天ぷら 텐푸라", restaurant: "天ぷら ひらお" },
   { day: "Day 2", meal: "저녁", theme: "もつ鍋 모츠나베", restaurant: "もつ鍋 やま中" },
-  { day: "Day 3", meal: "점심", theme: "湯布院名物 유후인 명물", restaurant: "由布まぶし 心" },
+  { day: "Day 3", meal: "점심", theme: "ラーメン 라멘", restaurant: "博多一双" },
   { day: "Day 3", meal: "저녁", theme: "焼き鳥 야키토리", restaurant: "かわ屋 薬院本店" },
   { day: "Day 4", meal: "점심", theme: "うどん 우동", restaurant: "うどん平" },
   { day: "Day 4", meal: "저녁", theme: "寿司 스시", restaurant: "ひょうたん寿司" },
-  { day: "Day 5", meal: "점심", theme: "ラーメン 라멘", restaurant: "博多一双" },
+  { day: "Day 5", meal: "브런치", theme: "焼きカレー 야키카레", restaurant: "모지코 바나나카레" },
+  { day: "Day 5", meal: "점심", theme: "市場寿司 시장초밥", restaurant: "唐戸市場 가라토시장" },
 ];
 
 function ReferenceLink({ title, url }: { title: string; url: string }) {
