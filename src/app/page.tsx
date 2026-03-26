@@ -15,14 +15,14 @@ export default function Home() {
         budget={{
           total: {
             label: "합계 (1인 기준)",
-            amount: "~¥69,500",
-            detail: "약 65만원 (환율 ¥100=₩940 기준)",
+            amount: "~¥65,500",
+            detail: "약 62만원 (환율 ¥100=₩940 기준)",
           },
           items: [
             {
-              label: "숙소 (리솔 트리니티)",
-              amount: "~¥30,000",
-              detail: "4박 × ~¥15,000 ÷ 2인 · 14F 전망 대욕장",
+              label: "숙소 (더 라이블리)",
+              amount: "~¥26,000",
+              detail: "4박 × ~¥13,000 ÷ 2인 · 나카스카와바타역 도보 1분",
               icon: "🏨",
             },
             {
@@ -109,9 +109,9 @@ const day1Items: ScheduleItem[] = [
   {
     time: "18:15",
     emoji: "🏨",
-    text: "호텔 리솔 트리니티 하카타 체크인",
+    text: "더 라이블리 후쿠오카 하카타 체크인",
     detail:
-      "ホテルリソルトリニティ博多 · 나카스카와바타역 도보 1분 · 14F 전망 대욕장 · 피트니스 완비",
+      "THE LIVELY 福岡博多 · 나카스카와바타역 도보 1분 · 17:30~18:30 무료 맥주 · 2F 코워킹 24h",
     location: { lat: 33.5943, lng: 130.4065 },
   },
   {
@@ -464,7 +464,7 @@ const day5Items: ScheduleItem[] = [
   {
     time: "08:00",
     emoji: "🏨",
-    text: "리솔 트리니티 체크아웃 · 짐 보관",
+    text: "더 라이블리 체크아웃 · 짐 보관",
     detail:
       "호텔 프론트에 짐 보관 요청 · 中洲川端→博多 지하철 1정거장 4분 (¥210)",
   },
@@ -599,7 +599,7 @@ const days: DayData[] = [
     items: day1Items,
     transportCost: "¥260",
     mapUrl:
-      "https://www.google.com/maps/dir/福岡空港国際線ターミナル/ホテルリソルトリニティ博多/小金ちゃん+天神+福岡/中洲+屋台+福岡",
+      "https://www.google.com/maps/dir/福岡空港国際線ターミナル/THE+LIVELY+福岡博多/小金ちゃん+天神+福岡/中洲+屋台+福岡",
   },
   {
     day: 2,
@@ -608,7 +608,7 @@ const days: DayData[] = [
     items: day2Items,
     transportCost: "~¥910",
     mapUrl:
-      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/大濠公園+福岡/舞鶴公園+福岡/西公園+福岡/天麩羅処ひらお+アクロス福岡/天神地下街/キャナルシティ博多/もつ鍋やま中+赤坂+福岡",
+      "https://www.google.com/maps/dir/THE+LIVELY+福岡博多/大濠公園+福岡/舞鶴公園+福岡/西公園+福岡/天麩羅処ひらお+アクロス福岡/天神地下街/キャナルシティ博多/もつ鍋やま中+赤坂+福岡",
   },
   {
     day: 3,
@@ -617,7 +617,7 @@ const days: DayData[] = [
     items: day3Items,
     transportCost: "~¥2,370",
     mapUrl:
-      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/西鉄福岡天神駅/太刀洗駅/キリンビール福岡工場/太刀洗駅/博多一双+博多駅東本店/ドン・キホーテ中洲店/かわ屋+薬院+福岡",
+      "https://www.google.com/maps/dir/THE+LIVELY+福岡博多/西鉄福岡天神駅/太刀洗駅/キリンビール福岡工場/太刀洗駅/博多一双+博多駅東本店/ドン・キホーテ中洲店/かわ屋+薬院+福岡",
     note: "💡 오전 맥주공장 견학(¥500) 후 오후 쇼핑. 다음 날 클라이밍과 분리해 안전하게! 돈키호테 면세는 여권 필수 · ¥5,000 이상 구매 시",
   },
   {
@@ -627,7 +627,7 @@ const days: DayData[] = [
     items: day4Items,
     transportCost: "~¥770",
     mapUrl:
-      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/うどん平+博多/ベアハンズクライミングジム+福岡/薬院焼肉NIKUICHI+福岡",
+      "https://www.google.com/maps/dir/THE+LIVELY+福岡博多/うどん平+博多/ベアハンズクライミングジム+福岡/薬院焼肉NIKUICHI+福岡",
     note: "💡 클라이밍은 평일 13:00 오픈! 전날 맥주와 분리해서 컨디션 최상으로 등반. 13:30~17:00 약 3.5시간 · 이후 야쿠인에서 파르페 타임",
   },
   {
@@ -637,7 +637,7 @@ const days: DayData[] = [
     items: day5Items,
     transportCost: "~¥4,300",
     mapUrl:
-      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/ホテルリソルトリニティ博多/福岡空港国際線ターミナル",
+      "https://www.google.com/maps/dir/THE+LIVELY+福岡博多/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/THE+LIVELY+福岡博多/福岡空港国際線ターミナル",
     note: "💡 가라토시장 이키이키 바칸가이(活きいき馬関街)는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장",
   },
 ];
@@ -856,7 +856,7 @@ const mealData: MealEntry[] = [
 
 const checklistItems = [
   {
-    label: "호텔 리솔 트리니티 하카타 예약 (ホテルリソルトリニティ博多, 4박 3/30~4/3)",
+    label: "더 라이블리 후쿠오카 하카타 예약 (THE LIVELY 福岡博多, 4박 3/30~4/3)",
     category: "예약",
   },
   {
@@ -941,7 +941,7 @@ const referenceLinks = [
     url: "https://blog.naver.com/muk_dori30/223488718710",
   },
   {
-    title: "호텔 리솔 트리니티 하카타 공식",
-    url: "https://www.resol-hotel.jp/trinity-hakata/",
+    title: "더 라이블리 후쿠오카 하카타 공식",
+    url: "https://www.livelyhotels.com/ja/thelivelyfukuoka/",
   },
 ];

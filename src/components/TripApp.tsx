@@ -353,9 +353,9 @@ function OverviewContent({
       {/* Accommodation */}
       <div className="rounded-2xl border border-foreground/15 bg-foreground/[0.03] p-5 text-center">
         <span className="text-xl">🏨</span>
-        <p className="font-medium mt-1">호텔 리솔 트리니티 하카타</p>
-        <p className="text-xs text-foreground/60 mt-0.5">ホテルリソルトリニティ博多 · 中洲川端駅 도보 1분</p>
-        <p className="text-xs text-foreground/40 mt-0.5">4박 (3/30~4/3) · 14F 전망 대욕장 · 피트니스</p>
+        <p className="font-medium mt-1">더 라이블리 후쿠오카 하카타</p>
+        <p className="text-xs text-foreground/60 mt-0.5">THE LIVELY 福岡博多 · 中洲川端駅 도보 1분</p>
+        <p className="text-xs text-foreground/40 mt-0.5">4박 (3/30~4/3) · 무료 맥주 17:30~18:30 · 코워킹 24h</p>
       </div>
 
       {/* Day Cards */}
