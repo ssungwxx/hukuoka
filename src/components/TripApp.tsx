@@ -351,10 +351,11 @@ function OverviewContent({
       </section>
 
       {/* Accommodation */}
-      <div className="rounded-2xl border-2 border-dashed border-foreground/15 p-5 text-center text-foreground/40">
+      <div className="rounded-2xl border border-foreground/15 bg-foreground/[0.03] p-5 text-center">
         <span className="text-xl">🏨</span>
-        <p className="font-medium mt-1">숙소 미정</p>
-        <p className="text-xs mt-0.5">하카타역 or 텐진 근처 추천</p>
+        <p className="font-medium mt-1">호텔 리솔 트리니티 하카타</p>
+        <p className="text-xs text-foreground/60 mt-0.5">ホテルリソルトリニティ博多 · 中洲川端駅 도보 1분</p>
+        <p className="text-xs text-foreground/40 mt-0.5">4박 (3/30~4/3) · 14F 전망 대욕장 · 피트니스</p>
       </div>
 
       {/* Day Cards */}

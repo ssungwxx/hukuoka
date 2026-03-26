@@ -14,15 +14,21 @@ export default function Home() {
         transportRoutes={transportRoutes}
         budget={{
           total: {
-            label: "합계 (숙소 제외)",
-            amount: "~¥31,500",
-            detail: "약 28만원 (환율 ¥100=₩900 기준)",
+            label: "합계 (1인 기준)",
+            amount: "~¥61,500",
+            detail: "약 55만원 (환율 ¥100=₩900 기준)",
           },
           items: [
             {
+              label: "숙소 (리솔 트리니티)",
+              amount: "~¥30,000",
+              detail: "4박 × ~¥15,000 ÷ 2인 · 14F 전망 대욕장",
+              icon: "🏨",
+            },
+            {
               label: "교통비 총합",
               amount: "~¥8,000",
-              detail: "공항↔시내, 시내이동, 기타큐슈 왕복 포함",
+              detail: "공항↔中洲川端, 시내이동, 기타큐슈 왕복 포함",
               icon: "🚇",
             },
             {
@@ -95,15 +101,18 @@ const day1Items: ScheduleItem[] = [
   {
     time: "18:00",
     emoji: "🚇",
-    text: "지하철 공항선 → 하카타역",
-    detail: "2정거장, 5분 소요",
+    text: "지하철 공항선 → 나카스카와바타역 (中洲川端)",
+    detail: "4정거장, 11분 소요 · 하카타역에서 2정거장 더",
     cost: "¥260",
-    location: { lat: 33.5897, lng: 130.4207 },
+    location: { lat: 33.5943, lng: 130.4058 },
   },
   {
     time: "18:15",
     emoji: "🏨",
-    text: "숙소 체크인 & 짐 정리",
+    text: "호텔 리솔 트리니티 하카타 체크인",
+    detail:
+      "ホテルリソルトリニティ博多 · 나카스카와바타역 도보 1분 · 14F 전망 대욕장 · 피트니스 완비",
+    location: { lat: 33.5943, lng: 130.4065 },
   },
   {
     time: "19:30",
@@ -129,7 +138,7 @@ const day1Items: ScheduleItem[] = [
     time: "21:00",
     emoji: "🌃",
     text: "나카스 강변 야경 산책",
-    detail: "하카타역에서 나카스까지 도보 약 12~15분",
+    detail: "숙소에서 도보 1분 · 나카스 강변 야경과 야타이 불빛",
     location: { lat: 33.5943, lng: 130.4058 },
   },
   {
@@ -150,7 +159,7 @@ const day2Items: ScheduleItem[] = [
     emoji: "🌸",
     text: "오호리 공원 산책",
     detail:
-      "지하철 오호리공원역(大濠公園) 하차 · 호수 둘레 산책로 · 스타벅스 호수뷰",
+      "中洲川端→大濠公園 지하철 3정거장 7분 · 호수 둘레 산책로 · 스타벅스 호수뷰",
     cost: "¥260",
     location: { lat: 33.5864, lng: 130.3792 },
   },
@@ -241,9 +250,9 @@ const day3Items: ScheduleItem[] = [
   {
     time: "08:00",
     emoji: "🚃",
-    text: "하카타 출발 → 키린 맥주 후쿠오카 공장",
+    text: "숙소 출발 → 키린 맥주 후쿠오카 공장",
     detail:
-      "하카타→텐진(지하철 ¥210) → 니시테츠 텐진→오고리(특급 37분, ¥530) → 아마기철도 오고리→타치아라이(15분, ¥280) → 도보 15분 또는 무료 셔틀",
+      "中洲川端→텐진(지하철 1정거장 ¥210) → 니시테츠 텐진→오고리(특급 37분, ¥530) → 아마기철도 오고리→타치아라이(15분, ¥280) → 도보 15분 또는 무료 셔틀",
     cost: "편도 ¥1,020",
     location: { lat: 33.5897, lng: 130.4207 },
   },
@@ -455,9 +464,9 @@ const day5Items: ScheduleItem[] = [
   {
     time: "08:00",
     emoji: "🏨",
-    text: "숙소 체크아웃 · 짐 보관",
+    text: "리솔 트리니티 체크아웃 · 짐 보관",
     detail:
-      "호텔 프론트에 짐 보관 요청 또는 하카타역 코인락커 이용 (¥300~700)",
+      "호텔 프론트에 짐 보관 요청 · 中洲川端→博多 지하철 1정거장 4분 (¥210)",
   },
   {
     time: "08:20",
@@ -530,9 +539,9 @@ const day5Items: ScheduleItem[] = [
   {
     time: "14:40",
     emoji: "🛍️",
-    text: "하카타역 도착 · 짐 회수",
+    text: "하카타역 도착 · 기념품 쇼핑",
     detail:
-      "코인락커 or 호텔에서 짐 회수 · 남은 시간 하카타역 주변 기념품 쇼핑",
+      "하카타역 주변 기념품 쇼핑 · 이후 中洲川端 숙소에서 짐 회수 (지하철 1정거장 or 도보 12분)",
     location: { lat: 33.5897, lng: 130.4207 },
   },
   {
@@ -558,9 +567,9 @@ const day5Items: ScheduleItem[] = [
   {
     time: "17:00",
     emoji: "🚇",
-    text: "공항 이동 (국제선 터미널)",
+    text: "숙소 짐 회수 → 공항 이동",
     detail:
-      "지하철 하카타→후쿠오카공항 국내선 (5분, ¥260) → 무료 셔틀로 국제선 터미널 이동 (15분) · 또는 니시테츠 버스로 국제선 직행 (20~30분)",
+      "中洲川端 숙소에서 짐 회수 → 中洲川端→福岡空港 지하철 11분 (¥260) → 무료 셔틀로 국제선 터미널 이동 (15분)",
     cost: "¥260",
   },
   {
@@ -590,7 +599,7 @@ const days: DayData[] = [
     items: day1Items,
     transportCost: "¥260",
     mapUrl:
-      "https://www.google.com/maps/dir/福岡空港国際線ターミナル/博多駅/小金ちゃん+天神+福岡/中洲+屋台+福岡",
+      "https://www.google.com/maps/dir/福岡空港国際線ターミナル/ホテルリソルトリニティ博多/小金ちゃん+天神+福岡/中洲+屋台+福岡",
   },
   {
     day: 2,
@@ -599,7 +608,7 @@ const days: DayData[] = [
     items: day2Items,
     transportCost: "~¥960",
     mapUrl:
-      "https://www.google.com/maps/dir/博多駅/大濠公園+福岡/舞鶴公園+福岡/西公園+福岡/天麩羅処ひらお+アクロス福岡/天神地下街/キャナルシティ博多/もつ鍋やま中+赤坂+福岡",
+      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/大濠公園+福岡/舞鶴公園+福岡/西公園+福岡/天麩羅処ひらお+アクロス福岡/天神地下街/キャナルシティ博多/もつ鍋やま中+赤坂+福岡",
   },
   {
     day: 3,
@@ -608,7 +617,7 @@ const days: DayData[] = [
     items: day3Items,
     transportCost: "~¥2,250",
     mapUrl:
-      "https://www.google.com/maps/dir/博多駅/西鉄福岡天神駅/太刀洗駅/キリンビール福岡工場/太刀洗駅/博多一双+博多駅東本店/ドン・キホーテ中洲店/かわ屋+薬院+福岡",
+      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/西鉄福岡天神駅/太刀洗駅/キリンビール福岡工場/太刀洗駅/博多一双+博多駅東本店/ドン・キホーテ中洲店/かわ屋+薬院+福岡",
     note: "💡 오전 맥주공장 견학(¥500) 후 오후 쇼핑. 다음 날 클라이밍과 분리해 안전하게! 돈키호테 면세는 여권 필수 · ¥5,000 이상 구매 시",
   },
   {
@@ -618,7 +627,7 @@ const days: DayData[] = [
     items: day4Items,
     transportCost: "~¥770",
     mapUrl:
-      "https://www.google.com/maps/dir/博多駅/うどん平+博多/ベアハンズクライミングジム+福岡/薬院焼肉NIKUICHI+福岡",
+      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/うどん平+博多/ベアハンズクライミングジム+福岡/薬院焼肉NIKUICHI+福岡",
     note: "💡 클라이밍은 평일 13:00 오픈! 전날 맥주와 분리해서 컨디션 최상으로 등반. 13:30~17:00 약 3.5시간 · 이후 야쿠인에서 파르페 타임",
   },
   {
@@ -626,9 +635,9 @@ const days: DayData[] = [
     date: "4월 3일 (금)",
     title: "기타큐슈 (모지코 & 가라토시장) + 귀국",
     items: day5Items,
-    transportCost: "~¥3,700",
+    transportCost: "~¥3,910",
     mapUrl:
-      "https://www.google.com/maps/dir/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/福岡空港国際線ターミナル",
+      "https://www.google.com/maps/dir/ホテルリソルトリニティ博多/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/ホテルリソルトリニティ博多/福岡空港国際線ターミナル",
     note: "💡 가라토시장 이키이키 바칸가이(活きいき馬関街)는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장",
   },
 ];
@@ -640,17 +649,31 @@ const days: DayData[] = [
 const transportRoutes: TransportRoute[] = [
   {
     from: "공항 (국내선)",
-    to: "하카타역",
+    to: "나카스카와바타역 (숙소)",
     method: "지하철 공항선",
-    time: "5분",
+    time: "11분",
     cost: "¥260",
   },
   {
-    from: "하카타역",
+    from: "숙소 (中洲川端)",
+    to: "하카타역",
+    method: "지하철 공항선",
+    time: "4분",
+    cost: "¥210",
+  },
+  {
+    from: "숙소 (中洲川端)",
     to: "텐진역",
     method: "지하철 공항선",
-    time: "6분",
+    time: "3분",
     cost: "¥210",
+  },
+  {
+    from: "숙소 (中洲川端)",
+    to: "오호리공원역",
+    method: "지하철 공항선",
+    time: "7분",
+    cost: "¥260",
   },
   {
     from: "텐진역",
@@ -709,17 +732,24 @@ const transportRoutes: TransportRoute[] = [
     cost: "¥400",
   },
   {
-    from: "하카타역",
-    to: "나카스",
+    from: "숙소 (中洲川端)",
+    to: "나카스 야타이",
     method: "도보",
-    time: "12~15분",
+    time: "1~3분",
     cost: "무료",
   },
   {
-    from: "하카타역",
+    from: "숙소 (中洲川端)",
     to: "캐널시티",
     method: "도보",
-    time: "10분",
+    time: "5~7분",
+    cost: "무료",
+  },
+  {
+    from: "숙소 (中洲川端)",
+    to: "돈키호테 나카스점",
+    method: "도보",
+    time: "3~5분",
     cost: "무료",
   },
   {
@@ -825,7 +855,10 @@ const mealData: MealEntry[] = [
    ═══════════════════════════════════════════ */
 
 const checklistItems = [
-  { label: "숙소 예약", category: "예약" },
+  {
+    label: "호텔 리솔 트리니티 하카타 예약 (ホテルリソルトリニティ博多, 4박 3/30~4/3)",
+    category: "예약",
+  },
   {
     label: "키린 맥주 공장 투어 예약 (3/1 오픈, ¥500)",
     category: "예약",
@@ -892,5 +925,9 @@ const referenceLinks = [
   {
     title: "후쿠오카 쇼핑 가이드",
     url: "https://blog.naver.com/muk_dori30/223488718710",
+  },
+  {
+    title: "호텔 리솔 트리니티 하카타 공식",
+    url: "https://www.resol-hotel.jp/trinity-hakata/",
   },
 ];
