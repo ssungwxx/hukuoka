@@ -50,7 +50,7 @@ export default function Home() {
           <div>
             <h3 className="font-semibold text-sm mb-2">🚇 IC 카드</h3>
             <p className="text-sm text-foreground/60">
-              はやかけん(하야카켄), nimoca, SUGOCA 사용 가능. 한국 Suica/ICOCA도 호환됨. 모바일 Suica 있으면 별도 구매 불필요. 없으면 공항 지하철역에서 はやかけん 구매 (보증금 ¥500).
+              하야카켄(はやかけん), nimoca, SUGOCA 사용 가능. 한국 Suica/ICOCA도 호환됨. 모바일 Suica 있으면 별도 구매 불필요. 없으면 공항 지하철역에서 하야카켄(はやかけん) 구매 (보증금 ¥500).
             </p>
           </div>
           <div className="border-t border-foreground/[0.06] pt-4">
@@ -115,7 +115,7 @@ export default function Home() {
             transportCost="~¥3,700"
             mapUrl="https://www.google.com/maps/dir/博多駅/門司港駅/門司港レトロ/関門トンネル人道入口/唐戸市場/門司港駅/博多駅/福岡空港国際線ターミナル"
             items={day5Items}
-            note="💡 가라토시장 活きいき馬関街는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장"
+            note="💡 가라토시장 이키이키 바칸가이(活きいき馬関街)는 금요일 10:00~15:00 운영! 오전에 도착하면 여유롭게 즐길 수 있음. 국제선은 출발 2시간 전 도착 권장"
           />
         </div>
 
@@ -148,9 +148,9 @@ export default function Home() {
           items={[
             { label: "숙소 예약", category: "예약" },
             { label: "키린 맥주 공장 투어 예약 (3/1 오픈, ¥500)", category: "예약" },
-            { label: "もつ鍋 やま中 저녁 예약 (3/31)", category: "예약" },
-            { label: "薬院焼肉 NIKUICHI 저녁 예약 (4/2)", category: "예약" },
-            { label: "かわ屋 薬院 저녁 예약 (4/1)", category: "예약" },
+            { label: "모츠나베 야마나카 (もつ鍋 やま中) 저녁 예약 (3/31)", category: "예약" },
+            { label: "니쿠이치 야쿠인점 (薬院焼肉 NIKUICHI) 저녁 예약 (4/2)", category: "예약" },
+            { label: "카와야 야쿠인 (かわ屋 薬院) 저녁 예약 (4/1)", category: "예약" },
             { label: "항공편 웹 체크인", category: "준비물" },
             { label: "Wi-Fi / 유심 준비", category: "준비물" },
             { label: "여행자 보험", category: "준비물" },
@@ -164,7 +164,7 @@ export default function Home() {
           <h3 className="text-base font-semibold mb-3">🔗 참고 링크</h3>
           <div className="space-y-3">
             <ReferenceLink
-              title="唐戸市場 공식 (가라토시장)"
+              title="가라토시장 공식 (唐戸市場)"
               url="https://www.karatoichiba.com/"
             />
             <ReferenceLink
@@ -172,11 +172,11 @@ export default function Home() {
               url="https://www.kirin.co.jp/experience/factory/fukuoka/"
             />
             <ReferenceLink
-              title="もつ鍋 やま中 공식"
+              title="모츠나베 야마나카 공식 (もつ鍋 やま中)"
               url="https://motsunabe-yamanaka.com/en/"
             />
             <ReferenceLink
-              title="天ぷら ひらお 공식"
+              title="텐푸라 히라오 공식 (天ぷら ひらお)"
               url="https://www.hirao-foods.net/"
             />
             <ReferenceLink
@@ -184,7 +184,7 @@ export default function Home() {
               url="https://barehands.biz/english/"
             />
             <ReferenceLink
-              title="門司港レトロ 관광 안내"
+              title="모지코 레트로 관광 안내 (門司港レトロ)"
               url="https://www.mojiko.info/"
             />
             <ReferenceLink
@@ -237,12 +237,12 @@ const day1Items: ScheduleItem[] = [
   {
     time: "19:30",
     emoji: "🍜",
-    text: "텐진 야타이 小金ちゃん (코킨짱)",
-    detail: "焼きラーメン(야키라멘) 발상지 · 1967년 창업 · 오야후코도오리 입구 · 21~22시 피크타임에는 30~40분 대기",
+    text: "텐진 야타이 코킨짱 (小金ちゃん)",
+    detail: "야키라멘(焼きラーメン) 발상지 · 1967년 창업 · 오야후코도오리 입구 · 21~22시 피크타임에는 30~40분 대기",
     cost: "¥1,500~2,500",
     location: { lat: 33.5913, lng: 130.3985 },
     restaurant: {
-      signature: "焼きラーメン (야키라멘)",
+      signature: "야키라멘 (焼きラーメン)",
       tabelog: { rating: "3.51", url: "https://tabelog.com/fukuoka/A4001/A400103/40000201/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/小金ちゃん+天神+福岡" },
     },
@@ -270,7 +270,7 @@ const day2Items: ScheduleItem[] = [
     time: "09:00",
     emoji: "🌸",
     text: "오호리 공원 산책",
-    detail: "지하철 大濠公園역 하차 · 호수 둘레 산책로 · 스타벅스 호수뷰",
+    detail: "지하철 오호리공원역(大濠公園) 하차 · 호수 둘레 산책로 · 스타벅스 호수뷰",
     cost: "¥260",
     location: { lat: 33.5864, lng: 130.3792 },
   },
@@ -278,7 +278,7 @@ const day2Items: ScheduleItem[] = [
     time: "10:00",
     emoji: "🌸",
     text: "마이즈루 공원 벚꽃 (후쿠오카성 유적)",
-    detail: "오호리 공원에서 도보 10분 · 벚나무 약 1,000그루 · 福岡城さくらまつり 개최 기간 (야간 라이트업, 입장 ~¥300) · 무료 입장 (낮)",
+    detail: "오호리 공원에서 도보 10분 · 벚나무 약 1,000그루 · 후쿠오카성 벚꽃축제(福岡城さくらまつり) 개최 기간 (야간 라이트업, 입장 ~¥300) · 무료 입장 (낮)",
     location: { lat: 33.5850, lng: 130.3832 },
   },
   {
@@ -292,18 +292,18 @@ const day2Items: ScheduleItem[] = [
     time: "12:30",
     emoji: "🛍️",
     text: "텐진 지하상가 쇼핑 (天神地下街)",
-    detail: "니시 공원에서 버스 15분 또는 도보 30분 · 텐진역 직결 · 약 150개 매장 · 10:00~20:00 · 유럽풍 벽돌 아치 디자인",
+    detail: "니시공원에서 버스 15분 또는 도보 30분 · 텐진역 직결 · 약 150개 매장 · 10:00~20:00 · 유럽풍 벽돌 아치 디자인",
     location: { lat: 33.5905, lng: 130.3990 },
   },
   {
     time: "13:30",
     emoji: "🍤",
-    text: "점심: 天ぷら ひらお 아크로스 후쿠오카점",
-    detail: "아크로스 후쿠오카 B2F · 10:30~21:00 · 무료 반찬바 (明太子·いくら·塩辛) 전설급 · 예약 불가 · 피크 이후 시간대라 대기 적음",
+    text: "점심: 텐푸라 히라오 아크로스 후쿠오카점 (天ぷら ひらお)",
+    detail: "아크로스 후쿠오카 B2F · 10:30~21:00 · 무료 반찬바 (멘타이코·이쿠라·시오카라) 전설급 · 예약 불가 · 피크 이후 시간대라 대기 적음",
     cost: "¥800~1,200",
     location: { lat: 33.5896, lng: 130.4003 },
     restaurant: {
-      signature: "天ぷら定食 (텐푸라 정식)",
+      signature: "텐푸라 정식 (天ぷら定食)",
       tabelog: { rating: "3.61", url: "https://tabelog.com/fukuoka/A4001/A400103/40049747/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/天麩羅処ひらお+アクロス福岡" },
     },
@@ -325,12 +325,12 @@ const day2Items: ScheduleItem[] = [
   {
     time: "18:30",
     emoji: "🍲",
-    text: "저녁: もつ鍋 やま中 赤坂店 (모츠나베 야마나카)",
-    detail: "赤坂역 도보 3분 · 평일 16:00~23:00(L.O.22:30) · 미소맛 모츠나베가 인기 No.1 · 마무리에 ちゃんぽん麺 추가 · 예약 필수",
+    text: "저녁: 모츠나베 야마나카 아카사카점 (もつ鍋 やま中 赤坂店)",
+    detail: "아카사카역(赤坂) 도보 3분 · 평일 16:00~23:00(L.O.22:30) · 미소맛 모츠나베가 인기 No.1 · 마무리에 짬뽕면(ちゃんぽん麺) 추가 · 예약 필수",
     cost: "¥4,000~5,000",
     location: { lat: 33.5879, lng: 130.3925 },
     restaurant: {
-      signature: "みそ味もつ鍋 (미소 모츠나베)",
+      signature: "미소 모츠나베 (みそ味もつ鍋)",
       tabelog: { rating: "3.70", url: "https://tabelog.com/fukuoka/A4001/A400104/40004383/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/もつ鍋やま中+赤坂店+福岡" },
     },
@@ -351,7 +351,7 @@ const day3Items: ScheduleItem[] = [
     time: "10:00",
     emoji: "🍺",
     text: "키린 맥주 공장 견학 투어",
-    detail: "朝倉市馬田3601 · ¥500 · 약 80분 · 一番搾り 제조공정 견학 + 맥주 시음 2~3잔 포함 · 사전 예약 필수 (3/1부터 오픈) · 수요일 운영 확인됨",
+    detail: "아사쿠라시 마다 3601 (朝倉市馬田) · ¥500 · 약 80분 · 이치반시보리(一番搾り) 제조공정 견학 + 맥주 시음 2~3잔 포함 · 사전 예약 필수 (3/1부터 오픈) · 수요일 운영 확인됨",
     cost: "¥500",
     location: { lat: 33.3639, lng: 130.7247 },
   },
@@ -365,12 +365,12 @@ const day3Items: ScheduleItem[] = [
   {
     time: "13:30",
     emoji: "🍜",
-    text: "점심: 博多一双 (하카타 잇소)",
-    detail: "하카타역 동쪽 도보 5분 · 11:00~24:00 · 泡系(아와케이) 톤코츠 라멘 · 크리미한 거품 육수가 특징 · 替え玉(카에다마) 필수 · 대기 30분+",
+    text: "점심: 하카타 잇소 (博多一双)",
+    detail: "하카타역 동쪽 도보 5분 · 11:00~24:00 · 아와케이(泡系) 톤코츠 라멘 · 크리미한 거품 육수가 특징 · 카에다마(替え玉, 면 추가) 필수 · 대기 30분+",
     cost: "¥800~1,100",
     location: { lat: 33.5901, lng: 130.4250 },
     restaurant: {
-      signature: "泡系豚骨ラーメン (아와케이 톤코츠 라멘)",
+      signature: "아와케이 톤코츠 라멘 (泡系豚骨ラーメン)",
       tabelog: { rating: "3.72", url: "https://tabelog.com/fukuoka/A4001/A400101/40032701/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/博多一双+博多駅東本店" },
     },
@@ -379,7 +379,7 @@ const day3Items: ScheduleItem[] = [
     time: "15:00",
     emoji: "🛍️",
     text: "돈키호테 나카스점 / 드럭스토어 쇼핑",
-    detail: "中洲3-7-24 · 24시간 영업 · 면세 가능 (여권 지참, ¥5,000 이상) · 과자, 화장품, 잡화 등",
+    detail: "나카스 3-7-24 (中洲) · 24시간 영업 · 면세 가능 (여권 지참, ¥5,000 이상) · 과자, 화장품, 잡화 등",
     location: { lat: 33.5936, lng: 130.4073 },
   },
   {
@@ -392,12 +392,12 @@ const day3Items: ScheduleItem[] = [
   {
     time: "19:00",
     emoji: "🍗",
-    text: "저녁: かわ屋 薬院本店 (카와야)",
-    detail: "薬院역 도보 5~6분 · 焼き鳥 WEST 百名店 2024 선정 · 6일간 반복 굽기로 만드는 극강 바삭 닭껍질 · 豚バラ(돼지삼겹 꼬치)도 필수 · 예약 추천",
+    text: "저녁: 카와야 야쿠인본점 (かわ屋 薬院本店)",
+    detail: "야쿠인역(薬院) 도보 5~6분 · 야키토리 WEST 백명점 2024 선정 (焼き鳥 WEST 百名店) · 6일간 반복 굽기로 만드는 극강 바삭 닭껍질 · 돼지삼겹 꼬치(豚バラ)도 필수 · 예약 추천",
     cost: "¥2,500~4,000",
     location: { lat: 33.5813, lng: 130.3979 },
     restaurant: {
-      signature: "とりかわ (닭껍질 꼬치)",
+      signature: "닭껍질 꼬치 (とりかわ)",
       tabelog: { rating: "3.72", url: "https://tabelog.com/fukuoka/A4001/A400104/40005228/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/かわ屋+薬院+福岡" },
     },
@@ -415,12 +415,12 @@ const day4Items: ScheduleItem[] = [
   {
     time: "12:00",
     emoji: "🍜",
-    text: "점심: うどん平 (우동 타이라)",
-    detail: "博多区住吉5-10-7 · 하카타역 도보 11분 · 月~金 11:30~16:00 · 일·공휴일 정기 휴무 · 부드러운 하카타식 면발 · 예약 불가, 점심 줄 있음",
+    text: "점심: 우동 타이라 (うどん平)",
+    detail: "하카타구 스미요시 5-10-7 (博多区住吉) · 하카타역 도보 11분 · 월~금 11:30~16:00 · 일·공휴일 정기 휴무 · 부드러운 하카타식 면발 · 예약 불가, 점심 줄 있음",
     cost: "¥600~1,000",
     location: { lat: 33.5853, lng: 130.4175 },
     restaurant: {
-      signature: "ごぼう天うどん (우엉튀김 우동)",
+      signature: "우엉튀김 우동 (ごぼう天うどん)",
       tabelog: { rating: "3.69", url: "https://tabelog.com/fukuoka/A4001/A400101/40052349/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/うどん平+博多+住吉" },
     },
@@ -435,8 +435,8 @@ const day4Items: ScheduleItem[] = [
   {
     time: "13:30",
     emoji: "🧗",
-    text: "Bare Hands 클라이밍 (ベアハンズ)",
-    detail: "城南区七隈8-4-8 칠쿠마 패밀리프라자 내 · 평일 13:00~23:00 · 금요 정기휴무(목요 OK!) · 초회 등록 약 10분 · 신발 렌탈 가능 · 맥주 없이 컨디션 최상!",
+    text: "베어핸즈 클라이밍 (Bare Hands / ベアハンズ)",
+    detail: "조난구 나나쿠마 8-4-8 (城南区七隈) 나나쿠마 패밀리프라자 내 · 평일 13:00~23:00 · 금요 정기휴무(목요 OK!) · 초회 등록 약 10분 · 신발 렌탈 가능 · 맥주 없이 컨디션 최상!",
     cost: "~¥2,000~2,500",
     location: { lat: 33.5578, lng: 130.3658 },
   },
@@ -450,12 +450,12 @@ const day4Items: ScheduleItem[] = [
   {
     time: "19:30",
     emoji: "🥩",
-    text: "저녁: 薬院焼肉 NIKUICHI (니쿠이치)",
-    detail: "中央区薬院3-16-34 · 야쿠인오도리역 도보 4분 · 16:00~24:00(L.O.23:00) · A4·A5 큐슈산 흑모와규 七輪 숯불구이 · 特選7種盛り 필수 · 예약 추천",
+    text: "저녁: 니쿠이치 야쿠인점 (薬院焼肉 NIKUICHI)",
+    detail: "주오구 야쿠인 3-16-34 (中央区薬院) · 야쿠인오도리역 도보 4분 · 16:00~24:00(L.O.23:00) · A4·A5 큐슈산 흑모와규 시치린(七輪) 숯불구이 · 특선 7종 모듬(特選7種盛り) 필수 · 예약 추천",
     cost: "¥3,000~5,000",
     location: { lat: 33.5815, lng: 130.3958 },
     restaurant: {
-      signature: "特選7種盛り合わせ (특선 7종 와규 모듬)",
+      signature: "특선 7종 와규 모듬 (特選7種盛り合わせ)",
       tabelog: { rating: "3.27", url: "https://tabelog.com/fukuoka/A4001/A400104/40039111/" },
       google: { rating: "Map", url: "https://www.google.com/maps/search/薬院焼肉NIKUICHI+福岡" },
     },
@@ -482,14 +482,14 @@ const day5Items: ScheduleItem[] = [
     time: "09:40",
     emoji: "🏛️",
     text: "모지코 레트로 지구 산책",
-    detail: "門司港駅(국가 중요문화재) · 구 모지세관 · 해협플라자 · 레트로한 서양식 건축물 거리 · 여유롭게 40분 산책",
+    detail: "모지코역(門司港駅, 국가 중요문화재) · 구 모지세관 · 해협플라자 · 레트로한 서양식 건축물 거리 · 여유롭게 40분 산책",
     location: { lat: 33.9478, lng: 130.9625 },
   },
   {
     time: "10:20",
     emoji: "🍛",
     text: "모지코 바나나카레 브런치",
-    detail: "門司港名物 焼きカレー · 바나나맨, 港のカレー家 등 · 대부분 11시 오픈이지만 BEAR FRUITS 등 일부 10:30~ · 가볍게 브런치로 즐기고 가라토 초밥에 대비!",
+    detail: "모지코 명물 야키카레(門司港名物 焼きカレー) · 바나나맨, 미나토노카레야(港のカレー家) 등 · 대부분 11시 오픈이지만 BEAR FRUITS 등 일부 10:30~ · 가볍게 브런치로 즐기고 가라토 초밥에 대비!",
     cost: "~¥800~1,200",
     location: { lat: 33.9478, lng: 130.9625 },
   },
@@ -497,18 +497,18 @@ const day5Items: ScheduleItem[] = [
     time: "11:00",
     emoji: "🚶",
     text: "간몬해협 도보터널 횡단 → 시모노세키",
-    detail: "모지코에서 터널 입구까지 도보 약 15분 · 関門トンネル人道 전장 780m · 도보 약 15분 · 무료 · 규슈↔혼슈를 걸어서 건너는 체험!",
+    detail: "모지코에서 터널 입구까지 도보 약 15분 · 간몬터널 인도(関門トンネル人道) 전장 780m · 도보 약 15분 · 무료 · 규슈↔혼슈를 걸어서 건너는 체험!",
     location: { lat: 33.9611, lng: 130.9545 },
   },
   {
     time: "11:45",
     emoji: "🍣",
     text: "가라토시장 초밥 (唐戸市場)",
-    detail: "금요일 活きいき馬関街 운영! · 신선한 초밥을 골라 사서 바다 보며 먹기 · 복어(ふぐ)·참치·광어 등 시모노세키 직송 · 금~일·공휴일 10:00~15:00",
+    detail: "금요일 이키이키 바칸가이(活きいき馬関街) 운영! · 신선한 초밥을 골라 사서 바다 보며 먹기 · 복어(ふぐ)·참치·광어 등 시모노세키 직송 · 금~일·공휴일 10:00~15:00",
     cost: "~¥1,500~2,500",
     location: { lat: 33.9582, lng: 130.9436 },
     restaurant: {
-      signature: "市場直送 握り寿司 (시장 직송 초밥)",
+      signature: "시장 직송 초밥 (市場直送 握り寿司)",
       google: { rating: "Map", url: "https://www.google.com/maps/search/唐戸市場+下関" },
     },
   },
@@ -516,7 +516,7 @@ const day5Items: ScheduleItem[] = [
     time: "12:45",
     emoji: "⛴️",
     text: "간몬 연락선으로 모지코 복귀",
-    detail: "唐戸桟橋→門司港桟橋 · 약 5분 · 간몬해협 바다 위에서 관부연락선 기분!",
+    detail: "가라토 선착장(唐戸桟橋) → 모지코 선착장(門司港桟橋) · 약 5분 · 간몬해협 바다 위에서 관부연락선 기분!",
     cost: "¥400",
     location: { lat: 33.9582, lng: 130.9436 },
   },
@@ -567,7 +567,7 @@ const transportRoutes: TransportRoute[] = [
   { from: "텐진역", to: "니시테츠 오고리", method: "니시테츠 특급", time: "37분", cost: "¥530" },
   { from: "오고리역", to: "타치아라이역", method: "아마기 철도", time: "15분", cost: "¥280" },
   { from: "하카타역", to: "모지코역", method: "JR 가고시마본선", time: "약 1시간 20분", cost: "~¥1,500" },
-  { from: "唐戸桟橋", to: "門司港桟橋", method: "간몬 연락선", time: "5분", cost: "¥400" },
+  { from: "가라토 선착장 (唐戸桟橋)", to: "모지코 선착장 (門司港桟橋)", method: "간몬 연락선", time: "5분", cost: "¥400" },
   { from: "하카타역", to: "나카스", method: "도보", time: "12~15분", cost: "무료" },
   { from: "하카타역", to: "캐널시티", method: "도보", time: "10분", cost: "무료" },
   { from: "텐진", to: "캐널시티", method: "도보", time: "10~12분", cost: "무료" },
@@ -579,15 +579,15 @@ const transportRoutes: TransportRoute[] = [
 
 /* ── Meal Data ── */
 const mealData: MealEntry[] = [
-  { day: "Day 1", meal: "저녁", theme: "屋台 야타이", restaurant: "小金ちゃん + 나카스 야타이" },
-  { day: "Day 2", meal: "점심", theme: "天ぷら 텐푸라", restaurant: "天ぷら ひらお" },
-  { day: "Day 2", meal: "저녁", theme: "もつ鍋 모츠나베", restaurant: "もつ鍋 やま中" },
-  { day: "Day 3", meal: "점심", theme: "ラーメン 라멘", restaurant: "博多一双" },
-  { day: "Day 3", meal: "저녁", theme: "焼き鳥 야키토리", restaurant: "かわ屋 薬院本店" },
-  { day: "Day 4", meal: "점심", theme: "うどん 우동", restaurant: "うどん平" },
-  { day: "Day 4", meal: "저녁", theme: "焼肉 야키니쿠", restaurant: "薬院焼肉 NIKUICHI" },
-  { day: "Day 5", meal: "브런치", theme: "焼きカレー 야키카레", restaurant: "모지코 바나나카레" },
-  { day: "Day 5", meal: "점심", theme: "市場寿司 시장초밥", restaurant: "唐戸市場 가라토시장" },
+  { day: "Day 1", meal: "저녁", theme: "야타이 (屋台)", restaurant: "코킨짱 (小金ちゃん) + 나카스 야타이" },
+  { day: "Day 2", meal: "점심", theme: "텐푸라 (天ぷら)", restaurant: "텐푸라 히라오 (天ぷら ひらお)" },
+  { day: "Day 2", meal: "저녁", theme: "모츠나베 (もつ鍋)", restaurant: "모츠나베 야마나카 (もつ鍋 やま中)" },
+  { day: "Day 3", meal: "점심", theme: "라멘 (ラーメン)", restaurant: "하카타 잇소 (博多一双)" },
+  { day: "Day 3", meal: "저녁", theme: "야키토리 (焼き鳥)", restaurant: "카와야 야쿠인본점 (かわ屋 薬院本店)" },
+  { day: "Day 4", meal: "점심", theme: "우동 (うどん)", restaurant: "우동 타이라 (うどん平)" },
+  { day: "Day 4", meal: "저녁", theme: "야키니쿠 (焼肉)", restaurant: "니쿠이치 야쿠인점 (薬院焼肉 NIKUICHI)" },
+  { day: "Day 5", meal: "브런치", theme: "야키카레 (焼きカレー)", restaurant: "모지코 바나나카레" },
+  { day: "Day 5", meal: "점심", theme: "시장초밥 (市場寿司)", restaurant: "가라토시장 (唐戸市場)" },
 ];
 
 function ReferenceLink({ title, url }: { title: string; url: string }) {
