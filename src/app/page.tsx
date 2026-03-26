@@ -101,8 +101,8 @@ export default function Home() {
             day={4}
             date="4월 2일 (목)"
             title="클라이밍 데이"
-            transportCost="~¥810"
-            mapUrl="https://www.google.com/maps/dir/博多駅/うどん平+博多/ベアハンズクライミングジム+福岡/ひょうたん寿司+天神"
+            transportCost="~¥770"
+            mapUrl="https://www.google.com/maps/dir/博多駅/うどん平+博多/ベアハンズクライミングジム+福岡/薬院焼肉NIKUICHI+福岡"
             items={day4Items}
             note="💡 클라이밍은 평일 13:00 오픈! 전날 맥주와 분리해서 컨디션 최상으로 등반. 13:30~19:00 약 5.5시간 확보"
           />
@@ -149,7 +149,7 @@ export default function Home() {
             { label: "숙소 예약", category: "예약" },
             { label: "키린 맥주 공장 투어 예약 (3/1 오픈, ¥500)", category: "예약" },
             { label: "もつ鍋 やま中 저녁 예약 (3/31)", category: "예약" },
-            { label: "ひょうたん寿司 확인 (3인 이상 시 예약)", category: "예약" },
+            { label: "薬院焼肉 NIKUICHI 저녁 예약 (4/2)", category: "예약" },
             { label: "かわ屋 薬院 저녁 예약 (4/1)", category: "예약" },
             { label: "항공편 웹 체크인", category: "준비물" },
             { label: "Wi-Fi / 유심 준비", category: "준비물" },
@@ -443,21 +443,21 @@ const day4Items: ScheduleItem[] = [
   {
     time: "19:00",
     emoji: "🚇",
-    text: "텐진으로 복귀",
-    detail: "나나쿠마역 → 텐진미나미역 (지하철 나나쿠마선, 12분)",
-    cost: "¥300",
+    text: "야쿠인으로 이동",
+    detail: "나나쿠마역 → 야쿠인오도리역 (지하철 나나쿠마선, 10분)",
+    cost: "¥260",
   },
   {
     time: "19:30",
-    emoji: "🍣",
-    text: "저녁: ひょうたん寿司 (효탄즈시)",
-    detail: "天神2-10-20 新大閣ビル 2~3F · 11:30~15:00 / 17:00~21:30(L.O.21:00) · 큐슈산 신선 어패류 · 関サバ·活イカ(활오징어) 추천 · 3인 이상만 예약 가능, 2인 이하는 줄서기",
+    emoji: "🥩",
+    text: "저녁: 薬院焼肉 NIKUICHI (니쿠이치)",
+    detail: "中央区薬院3-16-34 · 야쿠인오도리역 도보 4분 · 16:00~24:00(L.O.23:00) · A4·A5 큐슈산 흑모와규 七輪 숯불구이 · 特選7種盛り 필수 · 예약 추천",
     cost: "¥3,000~5,000",
-    location: { lat: 33.5893, lng: 130.3987 },
+    location: { lat: 33.5815, lng: 130.3958 },
     restaurant: {
-      signature: "おまかせ寿司セット (오마카세 스시 세트)",
-      tabelog: { rating: "3.63", url: "https://tabelog.com/fukuoka/A4001/A400103/40001153/" },
-      google: { rating: "Map", url: "https://www.google.com/maps/search/ひょうたん寿司+天神+福岡" },
+      signature: "特選7種盛り合わせ (특선 7종 와규 모듬)",
+      tabelog: { rating: "3.27", url: "https://tabelog.com/fukuoka/A4001/A400104/40039111/" },
+      google: { rating: "Map", url: "https://www.google.com/maps/search/薬院焼肉NIKUICHI+福岡" },
     },
   },
 ];
@@ -585,7 +585,7 @@ const mealData: MealEntry[] = [
   { day: "Day 3", meal: "점심", theme: "ラーメン 라멘", restaurant: "博多一双" },
   { day: "Day 3", meal: "저녁", theme: "焼き鳥 야키토리", restaurant: "かわ屋 薬院本店" },
   { day: "Day 4", meal: "점심", theme: "うどん 우동", restaurant: "うどん平" },
-  { day: "Day 4", meal: "저녁", theme: "寿司 스시", restaurant: "ひょうたん寿司" },
+  { day: "Day 4", meal: "저녁", theme: "焼肉 야키니쿠", restaurant: "薬院焼肉 NIKUICHI" },
   { day: "Day 5", meal: "브런치", theme: "焼きカレー 야키카레", restaurant: "모지코 바나나카레" },
   { day: "Day 5", meal: "점심", theme: "市場寿司 시장초밥", restaurant: "唐戸市場 가라토시장" },
 ];
