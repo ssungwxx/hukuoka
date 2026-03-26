@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { BottomNav } from "@/components/BottomNav";
 import { BackToTop } from "@/components/BackToTop";
 import { ScrollProgress } from "@/components/ScrollProgress";
 
@@ -34,7 +33,6 @@ export default function RootLayout({
         <ScrollProgress />
         {children}
         <BackToTop />
-        <BottomNav />
       </body>
     </html>
   );
