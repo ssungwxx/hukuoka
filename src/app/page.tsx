@@ -294,6 +294,26 @@ const day3Items: ScheduleItem[] = [
   },
   {
     time: "16:30",
+    emoji: "☕",
+    text: "카페 브라질레이로 (カフェ ブラジレイロ)",
+    detail:
+      "1934년 창업 후쿠오카 현존 최고(最古) 카페 · 고후쿠마치역(呉服町) 도보 2분 · 월~토 10:00~19:00 · 쇼와 양관 건물의 정통 킷사텐 분위기 · 자체 로스팅 블렌드 커피",
+    cost: "¥500~800",
+    location: { lat: 33.5945, lng: 130.4105 },
+    restaurant: {
+      signature: "자체 로스팅 블렌드 커피",
+      tabelog: {
+        rating: "3.54",
+        url: "https://tabelog.com/fukuoka/A4001/A400106/40002461/",
+      },
+      google: {
+        rating: "Map",
+        url: "https://www.google.com/maps/search/ブラジレイロ+福岡+博多区店屋町",
+      },
+    },
+  },
+  {
+    time: "17:30",
     emoji: "🛍️",
     text: "하카타역 주변 쇼핑",
     detail:
@@ -327,9 +347,22 @@ const day4Items: ScheduleItem[] = [
   {
     time: "10:00",
     emoji: "☕",
-    text: "여유 오전 / 카페 휴식",
+    text: "REC COFFEE 텐진 원빌점 (レックコーヒー)",
     detail:
-      "전날 맥주공장 이동이 많았으므로 늦잠·여유롭게 준비. 호텔 주변 카페에서 브런치도 OK",
+      "텐진역 11번 출구 도보 1분 · 원빌 6F · 월~수,금 8:00~20:00 / 목 ~15:30 · JBC 우승 바리스타의 스페셜티 커피 · 텐진 교차점이 내려다보이는 전망 · 핸드드립 싱글오리진 추천",
+    cost: "¥500~800",
+    location: { lat: 33.5905, lng: 130.399 },
+    restaurant: {
+      signature: "핸드드립 싱글오리진",
+      tabelog: {
+        rating: "3.80",
+        url: "https://tabelog.com/fukuoka/A4001/A400103/40070374/",
+      },
+      google: {
+        rating: "Map",
+        url: "https://www.google.com/maps/search/REC+COFFEE+天神ワンビル店",
+      },
+    },
   },
   {
     time: "12:00",
@@ -369,11 +402,31 @@ const day4Items: ScheduleItem[] = [
     location: { lat: 33.5578, lng: 130.3658 },
   },
   {
-    time: "19:00",
+    time: "17:00",
     emoji: "🚇",
     text: "야쿠인으로 이동",
     detail: "나나쿠마역 → 야쿠인오도리역 (지하철 나나쿠마선, 10분)",
     cost: "¥260",
+  },
+  {
+    time: "17:30",
+    emoji: "🍰",
+    text: "amber 파르페 (パフェ&デザート amber)",
+    detail:
+      "야쿠인오도리역 도보 1분 · 이트인 13:00~22:00 · 카운터에서 눈앞에서 완성해주는 체험형 파르페 · 제철 과일 사용, 2~3개월마다 메뉴 변경 · 클라이밍 후 당 보충에 최적",
+    cost: "¥1,500~2,000",
+    location: { lat: 33.5815, lng: 130.3979 },
+    restaurant: {
+      signature: "계절 한정 파르페",
+      tabelog: {
+        rating: "3.09",
+        url: "https://tabelog.com/fukuoka/A4001/A400104/40069269/",
+      },
+      google: {
+        rating: "Map",
+        url: "https://www.google.com/maps/search/パフェ%26デザート+amber+薬院",
+      },
+    },
   },
   {
     time: "19:30",
@@ -483,6 +536,26 @@ const day5Items: ScheduleItem[] = [
     location: { lat: 33.5897, lng: 130.4207 },
   },
   {
+    time: "15:15",
+    emoji: "🍰",
+    text: "데리스 타르트&카페 KITTE 하카타점",
+    detail:
+      "하카타역 직결 KITTE 하카타 B1F · 9:00~21:00 · 제철 과일 타르트 전문점 · 아마오우 딸기 타르트, 프루츠 파르페 · 여행 마무리 디저트 타임",
+    cost: "¥800~1,500",
+    location: { lat: 33.5897, lng: 130.4207 },
+    restaurant: {
+      signature: "계절 과일 타르트",
+      tabelog: {
+        rating: "3.08",
+        url: "https://tabelog.com/fukuoka/A4001/A400101/40059695/",
+      },
+      google: {
+        rating: "Map",
+        url: "https://www.google.com/maps/search/デリス+タルト%26カフェ+KITTE博多",
+      },
+    },
+  },
+  {
     time: "17:00",
     emoji: "🚇",
     text: "공항 이동 (국제선 터미널)",
@@ -546,7 +619,7 @@ const days: DayData[] = [
     transportCost: "~¥770",
     mapUrl:
       "https://www.google.com/maps/dir/博多駅/うどん平+博多/ベアハンズクライミングジム+福岡/薬院焼肉NIKUICHI+福岡",
-    note: "💡 클라이밍은 평일 13:00 오픈! 전날 맥주와 분리해서 컨디션 최상으로 등반. 13:30~19:00 약 5.5시간 확보",
+    note: "💡 클라이밍은 평일 13:00 오픈! 전날 맥주와 분리해서 컨디션 최상으로 등반. 13:30~17:00 약 3.5시간 · 이후 야쿠인에서 파르페 타임",
   },
   {
     day: 5,
