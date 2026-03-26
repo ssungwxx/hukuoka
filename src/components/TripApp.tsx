@@ -178,8 +178,8 @@ export function TripApp(props: TripAppProps) {
 
   const badgeClasses: Record<string, string> = {
     before: "bg-sakura-400 text-white",
-    during: "bg-emerald-100 text-emerald-800",
-    after: "bg-warm-100 text-amber-800",
+    during: "bg-emerald-100 text-emerald-800 dark:text-emerald-400",
+    after: "bg-warm-100 text-amber-800 dark:text-amber-400",
   };
 
   return (
@@ -397,7 +397,7 @@ function OverviewContent({
                   )}
                 </div>
                 <div className="flex flex-wrap items-center gap-1.5">
-                  <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-sky-50/80 text-sky-600 border border-sky-200/60">
+                  <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-sky-50/80 text-sky-600 dark:text-sky-400 border border-sky-200/60">
                     교통 {day.transportCost}
                   </span>
                   {mealCount > 0 && (
@@ -452,7 +452,7 @@ function DayContent({ day }: { day: DayData }) {
 
       {/* Badges */}
       <div className="flex flex-wrap gap-2">
-        <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-sky-50 text-sky-600 border border-sky-200">
+        <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-sky-50 text-sky-600 dark:text-sky-400 border border-sky-200">
           🚇 교통비 {day.transportCost}
         </span>
         {day.mapUrl && (
@@ -460,7 +460,7 @@ function DayContent({ day }: { day: DayData }) {
             href={day.mapUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-100 transition-colors"
+            className="text-xs font-medium px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 dark:text-emerald-400 border border-emerald-200 hover:bg-emerald-100 transition-colors"
           >
             🗺️ Google Maps 동선
           </a>
@@ -469,7 +469,7 @@ function DayContent({ day }: { day: DayData }) {
 
       {/* Note (if exists) — top placement for visibility */}
       {day.note && (
-        <div className="rounded-xl bg-warm-50 border border-warm-200/60 px-4 py-3 text-sm text-amber-700 leading-relaxed">
+        <div className="rounded-xl bg-warm-50 border border-warm-200/60 px-4 py-3 text-sm text-amber-700 dark:text-amber-400 leading-relaxed">
           {day.note}
         </div>
       )}
@@ -508,7 +508,7 @@ function DayContent({ day }: { day: DayData }) {
                     {item.emoji} {item.text}
                   </span>
                   {item.cost && (
-                    <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-warm-50 text-amber-700 border border-warm-200 shrink-0 whitespace-nowrap mt-0.5">
+                    <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-warm-50 text-amber-700 dark:text-amber-400 border border-warm-200 shrink-0 whitespace-nowrap mt-0.5">
                       {item.cost}
                     </span>
                   )}
@@ -533,7 +533,7 @@ function DayContent({ day }: { day: DayData }) {
                           href={item.restaurant.tabelog.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 border border-orange-200 hover:bg-orange-100 transition-colors"
+                          className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full bg-orange-50 text-orange-600 dark:text-orange-400 border border-orange-200 hover:bg-orange-100 transition-colors"
                         >
                           食べログ {item.restaurant.tabelog.rating}
                         </a>
@@ -543,7 +543,7 @@ function DayContent({ day }: { day: DayData }) {
                           href={item.restaurant.google.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100 transition-colors"
+                          className="inline-flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 dark:text-blue-400 border border-blue-200 hover:bg-blue-100 transition-colors"
                         >
                           Google Map
                         </a>

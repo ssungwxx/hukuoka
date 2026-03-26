@@ -58,8 +58,8 @@ export function Hero() {
 
   const badgeClasses: Record<string, string> = {
     before: "bg-sakura-400 text-white",
-    during: "bg-emerald-100 text-emerald-800",
-    after: "bg-warm-100 text-amber-800",
+    during: "bg-emerald-100 text-emerald-800 dark:text-emerald-400",
+    after: "bg-warm-100 text-amber-800 dark:text-amber-400",
   };
 
   return (

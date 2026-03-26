@@ -69,7 +69,7 @@ export function DaySchedule({
           {/* Badges - wrap on small screens */}
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 shrink-0 justify-end max-w-[45%] sm:max-w-none">
             {transportCost && (
-              <span className="text-xs font-medium px-2 py-1 rounded-full bg-sky-50 text-sky-600 border border-sky-200 whitespace-nowrap">
+              <span className="text-xs font-medium px-2 py-1 rounded-full bg-sky-50 text-sky-600 dark:text-sky-400 border border-sky-200 whitespace-nowrap">
                 교통비 {transportCost}
               </span>
             )}
@@ -83,7 +83,7 @@ export function DaySchedule({
                   href={mapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs font-medium px-2 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-100 transition-colors inline-block whitespace-nowrap"
+                  className="text-xs font-medium px-2 py-1 rounded-full bg-emerald-50 text-emerald-600 dark:text-emerald-400 border border-emerald-200 hover:bg-emerald-100 transition-colors inline-block whitespace-nowrap"
                 >
                   🗺️ 동선 보기
                 </a>
@@ -115,7 +115,7 @@ export function DaySchedule({
                   <div className="flex items-start justify-between gap-2">
                     <span className="text-sm">{item.text}</span>
                     {item.cost && (
-                      <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-warm-50 text-amber-700 border border-warm-200 shrink-0 whitespace-nowrap">
+                      <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-warm-50 text-amber-700 dark:text-amber-400 border border-warm-200 shrink-0 whitespace-nowrap">
                         {item.cost}
                       </span>
                     )}
@@ -132,7 +132,7 @@ export function DaySchedule({
                           href={item.restaurant.tabelog.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-orange-50 text-orange-600 border border-orange-200 hover:bg-orange-100 transition-colors"
+                          className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-orange-50 text-orange-600 dark:text-orange-400 border border-orange-200 hover:bg-orange-100 transition-colors"
                         >
                           食べログ {item.restaurant.tabelog.rating}
                         </a>
@@ -142,7 +142,7 @@ export function DaySchedule({
                           href={item.restaurant.google.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-200 hover:bg-blue-100 transition-colors"
+                          className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-blue-50 text-blue-600 dark:text-blue-400 border border-blue-200 hover:bg-blue-100 transition-colors"
                         >
                           Google {item.restaurant.google.rating}
                         </a>
@@ -163,7 +163,7 @@ export function DaySchedule({
             <DayMap items={items} />
           </div>
           {note && (
-            <div className="px-4 sm:px-5 py-3 bg-warm-50 text-sm text-amber-700 border-t border-warm-200">
+            <div className="px-4 sm:px-5 py-3 bg-warm-50 text-sm text-amber-700 dark:text-amber-400 border-t border-warm-200">
               {note}
             </div>
           )}

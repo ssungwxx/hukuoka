@@ -16,7 +16,7 @@ export function MealTable({ meals }: { meals: MealEntry[] }) {
               <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-sakura-100 text-sakura-500 border border-sakura-200">
                 {m.day}
               </span>
-              <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-warm-50 text-amber-700 border border-warm-200">
+              <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-warm-50 text-amber-700 dark:text-amber-400 border border-warm-200">
                 {m.meal}
               </span>
             </div>

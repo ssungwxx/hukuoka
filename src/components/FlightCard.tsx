@@ -17,7 +17,7 @@ export function FlightCard({
 }) {
   const bgClass = color === "sky" ? "bg-sky-50" : "bg-warm-50";
   const borderClass = color === "sky" ? "border-sky-200" : "border-warm-200";
-  const badgeClass = color === "sky" ? "bg-sky-100 text-sky-700" : "bg-warm-100 text-amber-700";
+  const badgeClass = color === "sky" ? "bg-sky-100 text-sky-700 dark:text-sky-400" : "bg-warm-100 text-amber-700 dark:text-amber-400";
 
   return (
     <div className={`rounded-2xl ${bgClass} border ${borderClass} p-5`}>

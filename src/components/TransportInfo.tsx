@@ -22,7 +22,7 @@ export function TransportInfo({ rows }: { rows: TransportRoute[] }) {
                 <span className="text-foreground/30 mx-0.5">&rarr;</span>{" "}
                 {row.to}
               </span>
-              <span className="text-xs font-medium px-2 py-0.5 rounded bg-sky-50 text-sky-600 border border-sky-200 shrink-0 whitespace-nowrap">
+              <span className="text-xs font-medium px-2 py-0.5 rounded bg-sky-50 text-sky-600 dark:text-sky-400 border border-sky-200 shrink-0 whitespace-nowrap">
                 {row.cost}
               </span>
             </div>
@@ -45,7 +45,7 @@ export function TransportInfo({ rows }: { rows: TransportRoute[] }) {
             <span className="ml-auto flex items-center gap-2 shrink-0">
               <span className="text-xs text-foreground/40">{row.method}</span>
               <span className="text-xs text-foreground/40">{row.time}</span>
-              <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-sky-50 text-sky-600 border border-sky-200">
+              <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-sky-50 text-sky-600 dark:text-sky-400 border border-sky-200">
                 {row.cost}
               </span>
             </span>
