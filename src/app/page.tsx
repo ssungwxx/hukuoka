@@ -249,19 +249,9 @@ const day2Items: ScheduleItem[] = [
 const day3Items: ScheduleItem[] = [
   {
     time: "10:00",
-    emoji: "🛍️",
-    text: "하카타역 주변 쇼핑",
-    detail:
-      "하카타 한큐 (10:00~20:00) · 마이몬 (1F 기념품) · 요도바시카메라 (9:30~22:00)",
-    location: { lat: 33.5897, lng: 130.4207 },
-  },
-  {
-    time: "11:00",
-    emoji: "🛍️",
-    text: "돈키호테 나카스점 / 드럭스토어 쇼핑",
-    detail:
-      "나카스 3-7-24 (中洲) · 24시간 영업 · 면세 가능 (여권 지참, ¥5,000 이상) · 과자, 화장품, 잡화 등",
-    location: { lat: 33.5936, lng: 130.4073 },
+    emoji: "🏨",
+    text: "숙소 휴식",
+    detail: "오전 여유롭게 휴식 · 오후 맥주공장 방문 전 체력 충전",
   },
   {
     time: "11:30",
